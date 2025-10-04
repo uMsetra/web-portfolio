@@ -748,6 +748,24 @@
       .project-gallery {
         grid-template-columns: 1fr;
       }
+      @media (max-width: 900px) {
+  /* Center CTA Buttons */
+  .cta-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .cta-container a {
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
+
     }
   </style>
 </head>
