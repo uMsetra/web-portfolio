@@ -54,6 +54,11 @@
       display: flex;
       align-items: center;
       height: 40px;
+      background: linear-gradient(45deg, #ff7e00, #ffb347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  letter-spacing: 1px;
     }
     
     .logo img {
@@ -75,6 +80,7 @@
 
     /* HAMBURGER MENU */
 .menu-toggle {
+  background: linear-gradient(45deg, #ff7e00, #ffb347);
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -94,6 +100,7 @@
 
 .menu-toggle.active .bar:nth-child(1) {
   transform: rotate(45deg) translateY(8px);
+  background: #ff7e00;
 }
 
 .menu-toggle.active .bar:nth-child(2) {
@@ -102,6 +109,7 @@
 
 .menu-toggle.active .bar:nth-child(3) {
   transform: rotate(-45deg) translateY(-8px);
+  background: #ff7e00;
 }
 
 /* MOBILE NAVIGATION DROPDOWN */
@@ -279,7 +287,7 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 60px;
-      align-items: start;
+      align-items: center;
     }
     
     .about-text p {
