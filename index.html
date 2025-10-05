@@ -695,6 +695,160 @@
       font-size: 0.9rem;
     }
 
+    /* PROJECT MODAL */
+.project-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-modal.active {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
+  width: 90%;
+  max-width: 1000px;
+  max-height: 90vh;
+  border-radius: 20px;
+  overflow-y: auto;
+  position: relative;
+  transform: translateY(50px);
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(255, 71, 71, 0.2);
+}
+
+.project-modal.active .modal-content {
+  transform: translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 71, 71, 0.2);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  background: #ff4747;
+  transform: rotate(90deg);
+}
+
+.modal-hero {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+
+.modal-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-body {
+  padding: 40px;
+}
+
+.modal-header {
+  margin-bottom: 30px;
+}
+
+.modal-tag {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(255, 71, 71, 0.2);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #ff4747;
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.modal-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.modal-section {
+  margin-bottom: 40px;
+}
+
+.modal-section h3 {
+  font-size: 1.5rem;
+  color: #ff4747;
+  margin-bottom: 15px;
+}
+
+.modal-section p {
+  color: #aaa;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.modal-deliverables {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.deliverable-item {
+  background: rgba(255, 71, 71, 0.1);
+  padding: 15px 20px;
+  border-radius: 10px;
+  border-left: 3px solid #ff4747;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.modal-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.modal-gallery img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.modal-gallery img:hover {
+  transform: scale(1.05);
+}
+
     /* ANIMATIONS */
     @keyframes fadeUp {
       from {
@@ -887,7 +1041,7 @@
       <p class="section-subtitle">Real projects for real businesses—from construction to automotive to educational platforms</p>
       
       <div class="project-gallery">
-        <div class="project-card">
+        <div class="project-card" onclick="openModal('somabhashi')">
           <img src="IMAGES/Frame 336.png" alt="Somabhashi Tyres Branding">
           <div class="project-overlay">
             <h3>Somabhashi Tyres & Wheels</h3>
@@ -896,7 +1050,7 @@
           </div>
         </div>
         
-        <div class="project-card">
+        <<div class="project-card" onclick="openModal('sompeta')">
           <img src="IMAGES/business card_11.jpg" alt="Sompeta Construction">
           <div class="project-overlay">
             <h3>Sompeta Construction</h3>
@@ -905,7 +1059,7 @@
           </div>
         </div>
         
-        <div class="project-card">
+        <div class="project-card" onclick="openModal('audiobooks')">
           <img src="IMAGES/Frame 341.png" alt="Audiobooks Lounge">
           <div class="project-overlay">
             <h3>Audiobooks Lounge</h3>
@@ -914,7 +1068,7 @@
           </div>
         </div>
         
-        <div class="project-card">
+        <div class="project-card" onclick="openModal('Khanyokuhle')">
           <img src="IMAGES/khanyokuuhle-02.png" alt="Khanyokuhle Projects">
           <div class="project-overlay">
             <h3>Khanyokuhle Projects</h3>
@@ -923,7 +1077,7 @@
           </div>
         </div>
         
-        <div class="project-card">
+        <div class="project-card" onclick="openModal('automotive')">
           <img src="IMAGES/Frame 336.png" alt="Automotive Social Campaign Concept">
           <div class="project-overlay">
             <h3>Automotive Social Campaign Concept</h3>
@@ -932,7 +1086,7 @@
           </div>
         </div>
         
-        <div class="project-card">
+        <div class="project-card" onclick="openModal('Neme')">
           <img src="IMAGES/Frame 352.png" alt="Neme Hairs">
           <div class="project-overlay">
             <h3>Neme Hairs</h3>
@@ -1126,6 +1280,45 @@
     <p>&copy; 2025 Sandile Masilela | Brand Identity Designer | Johannesburg, South Africa</p>
   </footer>
 
+
+  <!-- PROJECT MODAL -->
+<div class="project-modal" id="projectModal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    
+    <div class="modal-hero">
+      <img id="modalHeroImage" src="" alt="">
+    </div>
+    
+    <div class="modal-body">
+      <div class="modal-header">
+        <span class="modal-tag" id="modalTag"></span>
+        <h2 class="modal-title" id="modalTitle"></h2>
+      </div>
+      
+      <div class="modal-section">
+        <h3>The Challenge</h3>
+        <p id="modalChallenge"></p>
+      </div>
+      
+      <div class="modal-section">
+        <h3>The Solution</h3>
+        <p id="modalSolution"></p>
+      </div>
+      
+      <div class="modal-section">
+        <h3>Deliverables</h3>
+        <div class="modal-deliverables" id="modalDeliverables"></div>
+      </div>
+      
+      <div class="modal-section">
+        <h3>Project Gallery</h3>
+        <div class="modal-gallery" id="modalGallery"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
   <script>
     // NAVBAR SCROLL EFFECT
     window.addEventListener('scroll', () => {
@@ -1169,6 +1362,106 @@
     });
   });
 </script>
+
+<script>
+  // PROJECT DATA
+  const projectData = {
+    somabhashi: {
+      title: 'Somabhashi Tyres & Wheels',
+      tag: 'Branding',
+      heroImage: 'IMAGES/Frame 336.png',
+      challenge: 'Client needed a bold brand identity that would stand out in the competitive automotive retail space and communicate quality and reliability to customers.',
+      solution: 'Created a high-contrast orange and black brand system with bold typography designed for maximum visibility in both physical retail and roadside environments.',
+      deliverables: ['Logo Design', 'Brand Identity System', 'Marketing Materials', 'Signage Concepts'],
+      gallery: ['IMAGES/Frame 336.png', 'IMAGES/Frame 336.png', 'IMAGES/Frame 336.png']
+    },
+    sompeta: {
+      title: 'Sompeta Construction & Projects',
+      tag: 'Brand Identity',
+      heroImage: 'IMAGES/business card_11.jpg',
+      challenge: 'Construction company needed professional branding to differentiate from competitors and build trust with clients.',
+      solution: 'Designed a geometric logo combining structure and stability symbolism, with complete brand guidelines for consistent application across all materials.',
+      deliverables: ['Logo Redesign', 'Business Cards', 'Letterhead', 'Brand Guidelines'],
+      gallery: ['IMAGES/business card_11.jpg', 'IMAGES/business card_11.jpg', 'IMAGES/business card_11.jpg']
+    },
+    audiobooks: {
+      title: 'Audiobooks Lounge',
+      tag: 'Ed-Tech',
+      heroImage: 'IMAGES/Frame 341.png',
+      challenge: 'Educational startup needed a welcoming brand that made literature accessible for students who struggle with traditional reading.',
+      solution: 'Created a warm, approachable brand identity emphasizing comfort and accessibility, with visual metaphors of relaxation and learning.',
+      deliverables: ['Brand Identity', 'Logo Design', 'App UI Mockups', 'Marketing Materials'],
+      gallery: ['IMAGES/Frame 341.png', 'IMAGES/Frame 341.png', 'IMAGES/Frame 341.png']
+    },
+    khanyokuhle: {
+      title: 'Khanyokuhle Projects',
+      tag: 'Corporate',
+      heroImage: 'IMAGES/khanyokuuhle-02.png',
+      challenge: 'Project management company needed a complete brand system that communicated professionalism and reliability.',
+      solution: 'Developed a comprehensive corporate identity with clean, modern aesthetics suitable for business presentations and client communications.',
+      deliverables: ['Brand System', 'Logo Design', 'Corporate Materials'],
+      gallery: ['IMAGES/khanyokuuhle-02.png', 'IMAGES/khanyokuuhle-02.png', 'IMAGES/khanyokuuhle-02.png']
+    },
+    automotive: {
+      title: 'Automotive Social Campaign',
+      tag: 'Campaign Concept',
+      heroImage: 'IMAGES/Frame 336.png',
+      challenge: 'Self-initiated concept exploring social media marketing for automotive industry, balancing aspirational and accessible messaging.',
+      solution: 'Bold lifestyle-driven design blending product photography with emotional storytelling to position vehicles as both aspirational and accessible.',
+      deliverables: ['Social Media Campaign', 'Visual Concept', 'Marketing Strategy'],
+      gallery: ['IMAGES/Frame 336.png', 'IMAGES/Frame 336.png', 'IMAGES/Frame 336.png']
+    },
+    neme: {
+      title: 'Neme Hairs',
+      tag: 'Logo & Marketing',
+      heroImage: 'IMAGES/Frame 352.png',
+      challenge: 'Hair salon needed a modern brand identity that reflected elegance and confidence while appealing to diverse clientele.',
+      solution: 'Created sleek, sophisticated visual identity with cohesive marketing materials emphasizing premium quality and personal care.',
+      deliverables: ['Logo Design', 'Brand Identity', 'Marketing Materials'],
+      gallery: ['IMAGES/Frame 352.png', 'IMAGES/Frame 352.png', 'IMAGES/Frame 352.png']
+    }
+  };
+  
+  // OPEN MODAL
+  function openModal(projectId) {
+    const modal = document.getElementById('projectModal');
+    const project = projectData[projectId];
+    
+    if (!project) return;
+    
+    document.getElementById('modalHeroImage').src = project.heroImage;
+    document.getElementById('modalTag').textContent = project.tag;
+    document.getElementById('modalTitle').textContent = project.title;
+    document.getElementById('modalChallenge').textContent = project.challenge;
+    document.getElementById('modalSolution').textContent = project.solution;
+    
+    const deliverablesContainer = document.getElementById('modalDeliverables');
+    deliverablesContainer.innerHTML = project.deliverables.map(item => `<div class="deliverable-item">${item}</div>`).join('');
+    
+    const galleryContainer = document.getElementById('modalGallery');
+    galleryContainer.innerHTML = project.gallery.map(img => `<img src="${img}" alt="${project.title}">`).join('');
+    
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  
+  // CLOSE MODAL
+  function closeModal() {
+    const modal = document.getElementById('projectModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+  
+  // Close on click outside
+  document.getElementById('projectModal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+  
+  // Close on ESC key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+  </script>
 
 </body>
 </html>
