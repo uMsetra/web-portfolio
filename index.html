@@ -917,6 +917,43 @@
         grid-template-columns: 1fr;
       }
       
+      @media(max-width: 768px) {
+  /* ... your existing mobile styles ... */
+  
+  .modal-content {
+    width: 95%;
+    max-height: 95vh;
+  }
+  
+  .modal-hero {
+    height: 250px;
+  }
+  
+  .modal-body {
+    padding: 20px;
+  }
+  
+  .modal-title {
+    font-size: 1.8rem;
+  }
+  
+  .modal-gallery {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  
+  .modal-gallery img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .modal-deliverables {
+    grid-template-columns: 1fr;
+  }
+}
+
       @media (max-width: 900px) {
   .cta-buttons {
     display: flex;
