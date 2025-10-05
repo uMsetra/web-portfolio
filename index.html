@@ -75,16 +75,17 @@
       gap: 40px;
     }
 
-    /* HAMBURGER MENU */
-.me.menu-toggle {
-  background: transparent;
+   /* HAMBURGER MENU */
+.menu-toggle {
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 25px;
-  height: 20px;
+  width: 30px;
+  height: 22px;
   cursor: pointer;
   z-index: 1100;
+  background: transparent;
+  border: none;
 }
 
 .menu-toggle .bar {
@@ -93,11 +94,11 @@
   width: 100%;
   border-radius: 5px;
   transition: all 0.3s ease;
+  display: block;
 }
 
 .menu-toggle.active .bar:nth-child(1) {
-  transform: rotate(45deg) translateY(8px);
-  
+  transform: rotate(45deg) translateY(10px);
 }
 
 .menu-toggle.active .bar:nth-child(2) {
@@ -105,8 +106,7 @@
 }
 
 .menu-toggle.active .bar:nth-child(3) {
-  transform: rotate(-45deg) translateY(-8px);
-
+  transform: rotate(-45deg) translateY(-10px);
 }
 
 /* MOBILE NAVIGATION DROPDOWN */
