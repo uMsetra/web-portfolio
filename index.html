@@ -76,8 +76,8 @@
     }
 
     /* HAMBURGER MENU */
-.menu-toggle {
-  background: linear-gradient(45deg, #ffffff, #ffffff);
+.me.menu-toggle {
+  background: transparent;
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -88,6 +88,7 @@
 }
 
 .menu-toggle .bar {
+  background: #fff;
   height: 3px;
   width: 100%;
   border-radius: 5px;
@@ -761,20 +762,19 @@
       .project-gallery {
         grid-template-columns: 1fr;
       }
+      
       @media (max-width: 900px) {
-  /* Center CTA Buttons */
-  .cta-container {
+  .cta-buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-    text-align: center;
+    width: 100%;
   }
 
-  .cta-container a {
-    width: 80%;
-    max-width: 300px;
+  .cta-buttons a {
+    width: 90%;
+    max-width: 320px;
     text-align: center;
   }
 }
