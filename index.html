@@ -1337,12 +1337,17 @@
         <h3>The Challenge</h3>
         <p id="modalChallenge"></p>
       </div>
-      
+
       <div class="modal-section">
         <h3>The Solution</h3>
         <p id="modalSolution"></p>
       </div>
-      
+
+      <div class="modal-section">
+        <h3>My Approach</h3>
+        <p id="modalApproach"></p>
+      </div>
+
       <div class="modal-section">
         <h3>Deliverables</h3>
         <div class="modal-deliverables" id="modalDeliverables"></div>
@@ -1408,6 +1413,7 @@
       tag: 'Branding',
       heroImage: 'IMAGES/Frame 336.png',
       challenge: 'Client needed a bold brand identity that would stand out in the competitive automotive retail space and communicate quality and reliability to customers.',
+      approach: 'I focused on high-contrast colors for maximum visibility in retail environments. The bold typography and orange/black scheme were chosen specifically for roadside visibility and automotive industry appeal.',
       solution: 'Created a high-contrast orange and black brand system with bold typography designed for maximum visibility in both physical retail and roadside environments.',
       deliverables: ['Logo Design', 'Brand Identity System', 'Marketing Materials', 'Signage Concepts'],
       gallery: ['IMAGES/Frame 336.png', 'IMAGES/Frame 336.png', 'IMAGES/Frame 336.png']
@@ -1417,6 +1423,7 @@
       tag: 'Brand Identity',
       heroImage: 'IMAGES/business card_11.jpg',
       challenge: 'Construction company needed professional branding to differentiate from competitors and build trust with clients.',
+      approach: 'I focused on high-contrast colors for maximum visibility in retail environments. The bold typography and orange/black scheme were chosen specifically for roadside visibility and automotive industry appeal.',
       solution: 'Designed a geometric logo combining structure and stability symbolism, with complete brand guidelines for consistent application across all materials.',
       deliverables: ['Logo Redesign', 'Business Cards', 'Letterhead', 'Brand Guidelines'],
       gallery: ['IMAGES/business card_11.jpg', 'IMAGES/business card_11.jpg', 'IMAGES/business card_11.jpg']
@@ -1426,6 +1433,7 @@
       tag: 'Ed-Tech',
       heroImage: 'IMAGES/Frame 341.png',
       challenge: 'Educational startup needed a welcoming brand that made literature accessible for students who struggle with traditional reading.',
+      approach: 'I focused on high-contrast colors for maximum visibility in retail environments. The bold typography and orange/black scheme were chosen specifically for roadside visibility and automotive industry appeal.',
       solution: 'Created a warm, approachable brand identity emphasizing comfort and accessibility, with visual metaphors of relaxation and learning.',
       deliverables: ['Brand Identity', 'Logo Design', 'App UI Mockups', 'Marketing Materials'],
       gallery: ['IMAGES/Frame 341.png', 'IMAGES/Frame 341.png', 'IMAGES/Frame 341.png']
@@ -1435,6 +1443,7 @@
       tag: 'Corporate',
       heroImage: 'IMAGES/khanyokuuhle-02.png',
       challenge: 'Project management company needed a complete brand system that communicated professionalism and reliability.',
+      approach: 'I focused on high-contrast colors for maximum visibility in retail environments. The bold typography and orange/black scheme were chosen specifically for roadside visibility and automotive industry appeal.',
       solution: 'Developed a comprehensive corporate identity with clean, modern aesthetics suitable for business presentations and client communications.',
       deliverables: ['Brand System', 'Logo Design', 'Corporate Materials'],
       gallery: ['IMAGES/khanyokuuhle-02.png', 'IMAGES/khanyokuuhle-02.png', 'IMAGES/khanyokuuhle-02.png']
@@ -1444,6 +1453,7 @@
       tag: 'Campaign Concept',
       heroImage: 'IMAGES/chery tiggo 4 pro.png',
       challenge: 'Self-initiated concept exploring social media marketing for automotive industry, balancing aspirational and accessible messaging.',
+      approach: 'I focused on high-contrast colors for maximum visibility in retail environments. The bold typography and orange/black scheme were chosen specifically for roadside visibility and automotive industry appeal.',
       solution: 'Bold lifestyle-driven design blending product photography with emotional storytelling to position vehicles as both aspirational and accessible.',
       deliverables: ['Social Media Campaign', 'Visual Concept', 'Marketing Strategy'],
       gallery: ['IMAGES/chery tiggo 4 pro.png', 'IMAGES/chery tiggo 4 pro.png', 'IMAGES/chery tiggo 4 pro.png']
@@ -1453,6 +1463,7 @@
       tag: 'Logo & Marketing',
       heroImage: 'IMAGES/Frame 352.png',
       challenge: 'Hair salon needed a modern brand identity that reflected elegance and confidence while appealing to diverse clientele.',
+      approach: 'I focused on high-contrast colors for maximum visibility in retail environments. The bold typography and orange/black scheme were chosen specifically for roadside visibility and automotive industry appeal.',
       solution: 'Created sleek, sophisticated visual identity with cohesive marketing materials emphasizing premium quality and personal care.',
       deliverables: ['Logo Design', 'Brand Identity', 'Marketing Materials'],
       gallery: ['IMAGES/Frame 352.png', 'IMAGES/Frame 352.png', 'IMAGES/Frame 352.png']
@@ -1471,6 +1482,7 @@
     document.getElementById('modalTitle').textContent = project.title;
     document.getElementById('modalChallenge').textContent = project.challenge;
     document.getElementById('modalSolution').textContent = project.solution;
+    document.getElementById('modalApproach').textContent = project.approach;
     
     const deliverablesContainer = document.getElementById('modalDeliverables');
     deliverablesContainer.innerHTML = project.deliverables.map(item => `<div class="deliverable-item">${item}</div>`).join('');
