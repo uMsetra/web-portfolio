@@ -1,1516 +1,538 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sandile Masilela | Brand Identity Designer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-    
-    html {
-      scroll-behavior: smooth;
-    }
-    
-    body {
-      background: #0a0a0a;
-      color: #fff;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-    
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* NAVBAR */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.95);
-      backdrop-filter: blur(10px);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 50px;
-      z-index: 1000;
-      box-shadow: 0 2px 20px rgba(255, 71, 71, 0.1);
-      transition: padding 0.3s ease;
-    }
-    
-    nav.scrolled {
-      padding: 15px 50px;
-    }
-    
-    .logo {
-      display: flex;
-      align-items: center;
-      height: 40px;
-  font-weight: 800;
-  letter-spacing: 1px;
-    }
-    
-    .logo img {
-      height: 100%;
-      width: auto;
-      filter: brightness(1.2) sepia(1) saturate(5) hue-rotate(340deg);
-      transition: filter 0.3s;
-    }
-    
-    .logo:hover img {
-      filter: brightness(1.3) sepia(1) saturate(5) hue-rotate(340deg);
-    }
-    
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 40px;
-    }
-
-   /* HAMBURGER MENU */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 22px;
-  cursor: pointer;
-  z-index: 1100;
-  background: transparent;
-  border: none;
-}
-
-.menu-toggle .bar {
-  background: #fff;
-  height: 3px;
-  width: 100%;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  display: block;
-}
-
-.menu-toggle.active .bar:nth-child(1) {
-  transform: rotate(45deg) translateY(10px);
-}
-
-.menu-toggle.active .bar:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.active .bar:nth-child(3) {
-  transform: rotate(-45deg) translateY(-10px);
-}
-
-/* MOBILE NAVIGATION DROPDOWN */
-@media (max-width: 900px) {
-  nav ul {
-    position: fixed;
-    top: 70px;
-    right: -100%;
-    width: 100%;
-    height: calc(100vh - 70px);
-    background: rgba(10, 10, 10, 0.98);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    transition: right 0.3s ease;
-  }
-
-  nav ul.active {
-    right: 0;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-}
-    
-    nav ul li a {
-      font-weight: 500;
-      font-size: 0.95rem;
-      transition: all 0.3s;
-      position: relative;
-    }
-    
-    nav ul li a::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      transition: width 0.3s;
-    }
-    
-    nav ul li a:hover::after {
-      width: 100%;
-    }
-
-    /* HERO SECTION */
-    header {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-      padding: 120px 20px 80px;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    header::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -50%;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle, rgba(255,71,71,0.1) 0%, transparent 70%);
-      animation: float 20s infinite ease-in-out;
-    }
-    
-    @keyframes float {
-      0%, 100% { transform: translate(0, 0) rotate(0deg); }
-      50% { transform: translate(-50px, 50px) rotate(180deg); }
-    }
-    
-    .hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* centers vertically */
-  text-align: center;
-  padding: 0 20px;
-}
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 900px;
-    }
-    
-    .hero-subtitle {
-      font-size: 1rem;
-      font-weight: 500;
-      color: #ff4747;
-      margin-bottom: 15px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      animation: fadeDown 1s ease;
-    }
-    
-    header h1 {
-      font-size: 4rem;
-      font-weight: 800;
-      margin-bottom: 20px;
-      line-height: 1.2;
-      animation: fadeDown 1.2s ease;
-      background: linear-gradient(135deg, #fff, #ccc);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    
-    header .tagline {
-      font-size: 1.4rem;
-      margin-bottom: 15px;
-      color: #aaa;
-      animation: fadeUp 1.2s ease;
-      font-weight: 300;
-    }
-    
-    header .description {
-      font-size: 1.1rem;
-      margin-bottom: 40px;
-      color: #888;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-      animation: fadeUp 1.4s ease;
-      line-height: 1.8;
-    }
-    
-    .cta-buttons {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-      animation: fadeUp 1.6s ease;
-    }
-    
-    .cta-buttons .primary-btn {
-      background: linear-gradient(135deg, #ff4747, #ff8a00);
-      padding: 15px 35px;
-      border-radius: 50px;
-      font-weight: 600;
-      transition: all 0.3s;
-      box-shadow: 0 10px 30px rgba(255, 71, 71, 0.3);
-    }
-    
-    .cta-buttons .primary-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 40px rgba(255, 71, 71, 0.4);
-    }
-    
-    .cta-buttons .secondary-btn {
-      background: transparent;
-      border: 2px solid #ff4747;
-      padding: 15px 35px;
-      border-radius: 50px;
-      font-weight: 600;
-      transition: all 0.3s;
-    }
-    
-    .cta-buttons .secondary-btn:hover {
-      background: rgba(255, 71, 71, 0.1);
-      transform: translateY(-3px);
-    }
-
-    /* ABOUT */
-    section.about {
-      padding: 100px 20px;
-      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
-    }
-    
-    .about-container {
-      max-width: 1200px;
-      margin: auto;
-    }
-    
-    .about-content {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-    
-    .about-text p {
-      color: #aaa;
-      font-size: 1.1rem;
-      line-height: 1.8;
-      margin-bottom: 20px;
-    }
-    
-    .credentials {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-    
-    .credential-item {
-      background: rgba(255, 71, 71, 0.05);
-      padding: 25px;
-      border-radius: 12px;
-      border-left: 3px solid #ff4747;
-    }
-    
-    .credential-item h4 {
-      font-size: 1.2rem;
-      margin-bottom: 15px;
-      color: #ff4747;
-    }
-    
-    .credential-item p {
-      color: #aaa;
-      font-size: 0.95rem;
-      margin-bottom: 8px;
-      line-height: 1.6;
-    }
-
-    /* PACKAGES */
-    section.packages {
-      padding: 100px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    
-    .packages-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-    
-    .package-card {
-      background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
-      padding: 40px;
-      border-radius: 20px;
-      border: 1px solid rgba(255, 71, 71, 0.1);
-      transition: all 0.3s;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .package-card.featured {
-      border-color: rgba(255, 71, 71, 0.5);
-      box-shadow: 0 20px 40px rgba(255, 71, 71, 0.2);
-    }
-    
-    .package-card.featured::before {
-      content: 'MOST POPULAR';
-      position: absolute;
-      top: 20px;
-      right: -35px;
-      background: linear-gradient(135deg, #ff4747, #ff8a00);
-      color: #fff;
-      padding: 5px 40px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      transform: rotate(45deg);
-    }
-    
-    .package-card:hover {
-      transform: translateY(-10px);
-      border-color: rgba(255, 71, 71, 0.3);
-      box-shadow: 0 20px 40px rgba(255, 71, 71, 0.2);
-    }
-    
-    .package-tier {
-      font-size: 0.9rem;
-      color: #ff4747;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-    }
-    
-    .package-card h3 {
-      font-size: 2rem;
-      margin-bottom: 15px;
-    }
-    
-    .package-price {
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin-bottom: 10px;
-      background: linear-gradient(135deg, #fff, #888);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    
-    .package-price span {
-      font-size: 1.2rem;
-      font-weight: 400;
-      color: #666;
-    }
-    
-    .package-description {
-      color: #888;
-      font-size: 0.95rem;
-      margin-bottom: 30px;
-      line-height: 1.6;
-    }
-    
-    .package-features {
-      list-style: none;
-      margin-bottom: 30px;
-    }
-    
-    .package-features li {
-      color: #aaa;
-      margin-bottom: 12px;
-      padding-left: 25px;
-      position: relative;
-      font-size: 0.95rem;
-    }
-    
-    .package-features li::before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: #ff4747;
-      font-weight: bold;
-    }
-    
-    .package-btn {
-      display: block;
-      width: 100%;
-      padding: 15px;
-      background: transparent;
-      border: 2px solid #ff4747;
-      color: #fff;
-      border-radius: 50px;
-      font-weight: 600;
-      text-align: center;
-      transition: all 0.3s;
-    }
-    
-    .package-card.featured .package-btn {
-      background: linear-gradient(135deg, #ff4747, #ff8a00);
-      border: none;
-    }
-    
-    .package-btn:hover {
-      background: rgba(255, 71, 71, 0.1);
-      transform: translateY(-2px);
-    }
-    
-    .package-card.featured .package-btn:hover {
-      background: linear-gradient(135deg, #ff2424, #ff6b00);
-    }
-
-    /* SERVICES */
-    section.services {
-      padding: 100px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    
-    section h2 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #fff, #888);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    
-    .section-subtitle {
-      text-align: center;
-      color: #888;
-      font-size: 1.1rem;
-      margin-bottom: 60px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    .service-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-    
-    .service-item {
-      background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
-      padding: 40px;
-      border-radius: 20px;
-      border: 1px solid rgba(255, 71, 71, 0.1);
-      transition: all 0.3s;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .service-item::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: linear-gradient(135deg, #ff4747, #ff8a00);
-      transform: scaleX(0);
-      transition: transform 0.3s;
-    }
-    
-    .service-item:hover::before {
-      transform: scaleX(1);
-    }
-    
-    .service-item:hover {
-      transform: translateY(-10px);
-      border-color: rgba(255, 71, 71, 0.3);
-      box-shadow: 0 20px 40px rgba(255, 71, 71, 0.2);
-    }
-    
-    .service-item .icon {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      display: inline-block;
-      background: linear-gradient(135deg, #ff4747, #ff8a00);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    
-    .service-item h3 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 15px;
-    }
-    
-    .service-item p {
-      color: #aaa;
-      line-height: 1.8;
-    }
-
-    /* PROJECTS */
-    section.projects {
-      padding: 100px 20px;
-      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
-    }
-    
-    .projects-container {
-      max-width: 1200px;
-      margin: auto;
-    }
-    
-    .project-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-    
-    .project-card {
-      position: relative;
-      height: 400px;
-      border-radius: 20px;
-      overflow: hidden;
-      cursor: pointer;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      transition: all 0.4s;
-    }
-    
-    .project-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(255, 71, 71, 0.3);
-    }
-    
-    .project-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-    
-    .project-card:hover img {
-      transform: scale(1.1);
-    }
-    
-    .project-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
-      padding: 30px;
-      transform: translateY(100%);
-      transition: transform 0.4s ease;
-    }
-    
-    .project-card:hover .project-overlay {
-      transform: translateY(0);
-    }
-    
-    .project-overlay h3 {
-      font-size: 1.6rem;
-      margin-bottom: 10px;
-      color: #fff;
-    }
-    
-    .project-overlay p {
-      color: #aaa;
-      font-size: 0.95rem;
-    }
-    
-    .project-tag {
-      display: inline-block;
-      padding: 5px 15px;
-      background: rgba(255, 71, 71, 0.2);
-      border-radius: 20px;
-      font-size: 0.85rem;
-      margin-top: 10px;
-      color: #ff4747;
-    }
-
-    /* CONTACT */
-    section.contact {
-      padding: 100px 20px;
-      text-align: center;
-      max-width: 800px;
-      margin: auto;
-    }
-    
-    section.contact p {
-      color: #aaa;
-      font-size: 1.2rem;
-      margin-bottom: 40px;
-    }
-    
-    .contact-links {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    
-    .contact-links a {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 15px 35px;
-      border-radius: 50px;
-      font-weight: 600;
-      transition: all 0.3s;
-    }
-    
-    .contact-links .primary {
-      background: linear-gradient(135deg, #ff4747, #ff8a00);
-      box-shadow: 0 10px 30px rgba(255, 71, 71, 0.3);
-    }
-    
-    .contact-links .primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 40px rgba(255, 71, 71, 0.4);
-    }
-    
-    .contact-links .secondary {
-      background: transparent;
-      border: 2px solid #ff4747;
-    }
-    
-    .contact-links .secondary:hover {
-      background: rgba(255, 71, 71, 0.1);
-      transform: translateY(-3px);
-    }
-
-    /* FOOTER */
-    footer {
-      padding: 40px 20px;
-      text-align: center;
-      background: #000;
-      border-top: 1px solid rgba(255, 71, 71, 0.1);
-    }
-    
-    footer p {
-      color: #666;
-      font-size: 0.9rem;
-    }
-
-    /* PROJECT MODAL */
-.project-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.95);
-  z-index: 2000;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.project-modal.active {
-  display: flex;
-  opacity: 1;
-}
-
-.modal-content {
-  background: linear-gradient(135deg, #1a1a1a, #0f0f0f);
-  width: 90%;
-  max-width: 1000px;
-  max-height: 90vh;
-  border-radius: 20px;
-  overflow-y: auto;
-  position: relative;
-  transform: translateY(50px);
-  transition: transform 0.3s ease;
-  border: 1px solid rgba(255, 71, 71, 0.2);
-}
-
-.project-modal.active .modal-content {
-  transform: translateY(0);
-}
-
-.modal-close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 71, 71, 0.2);
-  border: none;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 24px;
-  cursor: pointer;
-  transition: all 0.3s;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal-close:hover {
-  background: #ff4747;
-  transform: rotate(90deg);
-}
-
-.modal-hero {
-  width: 100%;
-  height: 400px;
-  overflow: hidden;
-  border-radius: 20px 20px 0 0;
-}
-
-.modal-hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.modal-body {
-  padding: 40px;
-}
-
-.modal-header {
-  margin-bottom: 30px;
-}
-
-.modal-tag {
-  display: inline-block;
-  padding: 8px 20px;
-  background: rgba(255, 71, 71, 0.2);
-  border-radius: 20px;
-  font-size: 0.85rem;
-  color: #ff4747;
-  margin-bottom: 15px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.modal-title {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #fff;
-}
-
-.modal-section {
-  margin-bottom: 40px;
-}
-
-.modal-section h3 {
-  font-size: 1.5rem;
-  color: #ff4747;
-  margin-bottom: 15px;
-}
-
-.modal-section p {
-  color: #aaa;
-  line-height: 1.8;
-  font-size: 1.05rem;
-}
-
-.modal-deliverables {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.deliverable-item {
-  background: rgba(255, 71, 71, 0.1);
-  padding: 15px 20px;
-  border-radius: 10px;
-  border-left: 3px solid #ff4747;
-  color: #fff;
-  font-size: 0.95rem;
-}
-
-.modal-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.modal-gallery img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 12px;
-  transition: transform 0.3s;
-  cursor: pointer;
-}
-
-.modal-gallery img:hover {
-  transform: scale(1.05);
-}
-
-    /* ANIMATIONS */
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    @keyframes fadeDown {
-      from {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* RESPONSIVE */
-    @media(max-width: 768px) {
-      nav {
-        padding: 15px 20px;
-      }
-      
-      nav ul {
-        gap: 20px;
-        font-size: 0.9rem;
-      }
-      
-      .logo {
-        font-size: 1.4rem;
-      }
-      
-      header h1 {
-        font-size: 2.5rem;
-      }
-      
-      header .tagline {
-        font-size: 1.1rem;
-      }
-      
-      header .description {
-        font-size: 1rem;
-      }
-      
-      .cta-buttons {
-        flex-direction: column;
-        gap: 15px;
-      }
-      
-      .cta-buttons a {
-        width: 100%;
-        max-width: 300px;
-      }
-      
-      section h2 {
-        font-size: 2rem;
-      }
-      
-      .project-gallery {
-        grid-template-columns: 1fr;
-      }
-      
-      @media(max-width: 768px) {
-  /* ... your existing mobile styles ... */
-  
-  .modal-content {
-    width: 95%;
-    max-height: 95vh;
-  }
-  
-  .modal-hero {
-    height: 250px;
-  }
-  
-  .modal-body {
-    padding: 20px;
-  }
-  
-  .modal-title {
-    font-size: 1.8rem;
-  }
-  
-  .modal-gallery {
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
-  
-  .modal-gallery img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    margin: 0 auto;
-  }
-  
-  .modal-deliverables {
-    grid-template-columns: 1fr;
-  }
-}
-
-      @media (max-width: 900px) {
-  .cta-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .cta-buttons a {
-    width: 90%;
-    max-width: 320px;
-    text-align: center;
-  }
-}
-
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sandile Masilela — Brand Identity Designer, Johannesburg</title>
+<meta name="description" content="Brand identity, UX/UI and marketing design for South African businesses. Based in Johannesburg. Book a project in minutes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav id="navbar">
-    <a href="#home" class="logo">
-      <img src="IMAGES/LOGO 1 1.svg" alt="InVision Strategic Solutions">
-    </a>
-    <div class="menu-toggle" id="menu-toggle">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#packages">Packages</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<nav id="navbar">
+  <a href="#home" class="logo">Sandile<span>.</span></a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#packages">Pricing</a></li>
+    <li><a href="#book" class="nav-cta">Book a Project</a></li>
+  </ul>
+  <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+  </button>
+</nav>
 
-  <!-- HERO SECTION -->
-  <header id="home">
-    <div class="hero-content">
-      <div class="hero-subtitle">Brand Identity Designer</div>
-      <h1>Helping SA Businesses Stand Out & Grow</h1>
-      <p class="tagline">Graphic Designer • UX/UI Specialist • Visual Storytelling</p>
-      <p class="description">I transform brands through strategic design that doesn't just look good—it drives business growth and builds customer trust.</p>
-      <div class="cta-buttons">
-        <a href="https://wa.me/27646950715" target="_blank" class="primary-btn">Book Consultation</a>
-        <a href="#projects" class="secondary-btn">View Portfolio</a>
+<!-- HERO -->
+<header id="home">
+  <div class="container hero-inner">
+    <div class="hero-kicker"><span class="dot"></span><span>Available for new projects — Johannesburg, South Africa</span></div>
+    <h1>Design that makes<br>your brand <span class="rotator" data-words='["impossible to ignore.","easy to trust.","actually convert.","stand out locally."]'>impossible to ignore.</span></h1>
+    <p class="hero-desc">I'm Sandile Masilela, a brand identity and UX/UI designer helping South African businesses look as credible as they perform — from logo to launch.</p>
+    <div class="hero-actions">
+      <a href="#book" class="btn btn-primary">Start a Booking</a>
+      <a href="#work" class="btn btn-outline">View the Work</a>
+    </div>
+    <div class="hero-meta reveal">
+      <div><strong data-count="6">0</strong><span>Industries served</span></div>
+      <div><strong data-count="9">0</strong><span>Brand systems shipped</span></div>
+      <div><strong data-count="15" data-suffix=" min">0</strong><span>Free intro consult</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal">
+        <p class="eyebrow">About</p>
+        <h2 style="font-family:var(--font-display); font-weight:500; font-size:1.9rem; margin:14px 0 26px;">Strategy first, then the visuals.</h2>
+        <p>I'm a brand identity designer based in Johannesburg with a focus on helping South African businesses stand out in competitive markets.</p>
+        <p>My approach goes beyond making things look good — every decision is backed by business strategy, whether that's building trust through professional branding, improving usability to lift conversions, or producing marketing material that actually gets engaged with.</p>
+        <p>I've worked across construction, automotive, education technology and personal-care brands, which gives me a working sense of what different markets actually need to succeed.</p>
       </div>
-    </div>
-  </header>
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="about-container">
-      <div class="about-content">
-        <div class="about-text">
-          <h2>About Me</h2>
-          <p class="section-subtitle">Transforming brands through strategic design thinking</p>
-          
-          <p>I'm Sandile Masilela, a brand identity designer based in Johannesburg with a passion for helping South African businesses stand out in competitive markets.</p>
-          
-          <p>My approach goes beyond making things look good—I focus on strategic design that drives measurable business results. Whether it's building trust through professional branding, improving user experience to increase conversions, or creating marketing materials that actually engage audiences, every design decision is backed by business strategy.</p>
-          
-          <p>I've worked across multiple industries including construction, automotive, healthcare, and educational technology, giving me unique insights into what different markets need to succeed.</p>
-          
-          <div class="credentials">
-            <div class="credential-item">
-              <h4>Education</h4>
-              <p>Damelin - Diploma in Media and Graphics Design</p>
-              <p>FET Certificate in Information Technology Systems Development</p>
-            </div>
-            <div class="credential-item">
-              <h4>Certifications</h4>
-              <p>UI/UX Design - Great Learning (2024)</p>
-              <p>Responsive Web Design - FreeCodeCamp (2023)</p>
-            </div>
-            <div class="credential-item">
-              <h4>Based In</h4>
-              <p>Johannesburg, Gauteng</p>
-              <p>Serving clients across South Africa</p>
-            </div>
-          </div>
+      <div class="about-facts reveal">
+        <div class="about-fact">
+          <strong>Education</strong>
+          <span>Damelin — Diploma in Media and Graphics Design<br>FET Certificate in Information Technology Systems Development</span>
+        </div>
+        <div class="about-fact">
+          <strong>Certifications</strong>
+          <span>UI/UX Design — Great Learning (2024)<br>Responsive Web Design — freeCodeCamp (2023)</span>
+        </div>
+        <div class="about-fact">
+          <strong>Based in</strong>
+          <span>Johannesburg, Gauteng — serving clients across South Africa</span>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SERVICES -->
-  <section class="services" id="services">
-    <h2>What I Do</h2>
-    <p class="section-subtitle">Strategic design solutions that help your business attract customers and increase revenue</p>
-    
-    <div class="service-list">
-      <div class="service-item">
-        <div class="icon">🎨</div>
+<!-- PROCESS -->
+<section id="process" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">How it works</p>
+      <h2>From enquiry to launch, in four steps.</h2>
+    </div>
+    <div class="process-list reveal">
+      <div class="process-step">
+        <span class="num">01</span>
+        <h3>Discover</h3>
+        <p>A short call or WhatsApp chat to understand your business, audience and goals.</p>
+      </div>
+      <div class="process-step">
+        <span class="num">02</span>
+        <h3>Propose</h3>
+        <p>You get a scope, timeline and fixed price before any design work begins.</p>
+      </div>
+      <div class="process-step">
+        <span class="num">03</span>
+        <h3>Design</h3>
+        <p>Concepts, revisions and check-ins so the direction stays aligned with your brand.</p>
+      </div>
+      <div class="process-step">
+        <span class="num">04</span>
+        <h3>Deliver</h3>
+        <p>Final files, source assets and — where relevant — a short handover call.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">What I do</p>
+      <h2>Design that's built to do a job.</h2>
+      <p>Strategic design solutions that help your business attract customers and increase revenue.</p>
+    </div>
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <div class="icon">Bi</div>
         <h3>Brand Identity Design</h3>
-        <p>Logos and complete visual systems that build recognition and trust. From concept to comprehensive brand guidelines.</p>
+        <p>Logos and complete visual systems that build recognition and trust — from concept to a full brand guideline document.</p>
       </div>
-      
-      <div class="service-item">
-        <div class="icon">💻</div>
+      <div class="service-card">
+        <div class="icon">Ux</div>
         <h3>UX/UI Design</h3>
-        <p>Websites and apps designed to convert visitors into customers through intuitive user experiences and strategic layouts.</p>
+        <p>Websites and apps designed to convert visitors into customers through intuitive user flows and strategic layout.</p>
       </div>
-      
-      <div class="service-item">
-        <div class="icon">📱</div>
+      <div class="service-card">
+        <div class="icon">Mk</div>
         <h3>Marketing Materials</h3>
-        <p>Business cards, brochures, social media graphics, and promotional content that drives engagement and builds your brand.</p>
+        <p>Business cards, brochures, social media graphics and promotional content that drives engagement and builds your brand.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- PROJECTS -->
-  <section class="projects" id="projects">
-    <div class="projects-container">
-      <h2>Featured Work</h2>
-      <p class="section-subtitle">Real projects for real businesses—from construction to automotive to educational platforms</p>
-      
-      <div class="project-gallery">
-        <div class="project-card" onclick="openModal('somabhashi')">
-          <img src="IMAGES/Frame 336.png" alt="Somabhashi Tyres Branding">
-          <div class="project-overlay">
-            <h3>Somabhashi Tyres & Wheels</h3>
-            <p>Bold automotive brand identity with high-visibility design for retail environment</p>
-            <span class="project-tag">Branding</span>
-          </div>
-        </div>
-        
-        <div class="project-card" onclick="openModal('sompeta')">
-          <img src="IMAGES/business card_11.jpg" alt="Sompeta Construction">
-          <div class="project-overlay">
-            <h3>Sompeta Construction</h3>
-            <p>Professional construction company rebrand including logo, business cards, and brand guidelines</p>
-            <span class="project-tag">Brand Identity</span>
-          </div>
-        </div>
-        
-        <div class="project-card" onclick="openModal('audiobooks')">
-          <img src="IMAGES/Frame 341.png" alt="Audiobooks Lounge">
-          <div class="project-overlay">
-            <h3>Audiobooks Lounge</h3>
-            <p>Educational platform brand identity focused on comfort and accessibility for students</p>
-            <span class="project-tag">Ed-Tech</span>
-          </div>
-        </div>
-        
-        <div class="project-card" onclick="openModal('khanyokuhle')">
-          <img src="IMAGES/khanyokuuhle-02.png" alt="Khanyokuhle Projects">
-          <div class="project-overlay">
-            <h3>Khanyokuhle Projects</h3>
-            <p>Complete brand system for project management company</p>
-            <span class="project-tag">Corporate</span>
-          </div>
-        </div>
-        
-        <div class="project-card" onclick="openModal('automotive')">
-          <img src="IMAGES/chery tiggo 4 pro.png" alt="Automotive Social Campaign Concept">
-          <div class="project-overlay">
-            <h3>Automotive Social Campaign Concept</h3>
-            <p>Self-initiated automotive marketing concept exploring bold, lifestyle-driven design that positions vehicles as both aspirational and accessible</p>
-            <span class="project-tag">Campaign Concept</span>
-          </div>
-        </div>
-        
-        <div class="project-card" onclick="openModal('neme')">
-          <img src="IMAGES/Frame 352.png" alt="Neme Hairs">
-          <div class="project-overlay">
-            <h3>Neme Hairs</h3>
-            <p>A sleek, modern identity created to reflect elegance and confidence, supported by cohesive marketing materials for strong brand presence.</p>
-            <span class="project-tag">Logo & Marketing Material Design</span>
-          </div>
-        </div>
+<!-- WORK -->
+<section id="work">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Selected work</p>
+      <h2>Real projects for real businesses.</h2>
+      <p>From construction to automotive to educational platforms.</p>
+    </div>
+    <div class="filter-bar reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="branding">Branding</button>
+      <button class="filter-btn" data-filter="corporate">Corporate</button>
+      <button class="filter-btn" data-filter="campaign">Campaigns</button>
+      <button class="filter-btn" data-filter="edtech">Ed-Tech</button>
+    </div>
+    <div class="project-grid reveal">
+      <div class="project-card" data-project="somabhashi" data-category="branding">
+        <img src="IMAGES/Frame 336.png" alt="Somabhashi Tyres & Wheels branding" loading="lazy">
+        <div class="overlay"><span class="tag">Branding</span><h3>Somabhashi Tyres & Wheels</h3></div>
+      </div>
+      <div class="project-card" data-project="sompeta" data-category="corporate">
+        <img src="IMAGES/business card_11.jpg" alt="Sompeta Construction identity" loading="lazy">
+        <div class="overlay"><span class="tag">Brand Identity</span><h3>Sompeta Construction</h3></div>
+      </div>
+      <div class="project-card" data-project="audiobooks" data-category="edtech">
+        <img src="IMAGES/Frame 341.png" alt="Audiobooks Lounge brand" loading="lazy">
+        <div class="overlay"><span class="tag">Ed-Tech</span><h3>Audiobooks Lounge</h3></div>
+      </div>
+      <div class="project-card" data-project="khanyokuhle" data-category="corporate">
+        <img src="IMAGES/khanyokuuhle-02.png" alt="Khanyokuhle Projects identity" loading="lazy">
+        <div class="overlay"><span class="tag">Corporate</span><h3>Khanyokuhle Projects</h3></div>
+      </div>
+      <div class="project-card" data-project="automotive" data-category="campaign">
+        <img src="IMAGES/chery tiggo 4 pro.png" alt="Automotive social campaign concept" loading="lazy">
+        <div class="overlay"><span class="tag">Campaign Concept</span><h3>Automotive Social Campaign</h3></div>
+      </div>
+      <div class="project-card" data-project="neme" data-category="branding">
+        <img src="IMAGES/Frame 352.png" alt="Neme Hairs branding" loading="lazy">
+        <div class="overlay"><span class="tag">Logo & Marketing</span><h3>Neme Hairs</h3></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- PACKAGES -->
-  <section class="packages" id="packages">
-    <h2>Service Packages</h2>
-    <p class="section-subtitle">Flexible solutions designed for South African businesses at every stage</p>
-    
-    <div class="packages-grid">
-      <!-- Starter Package -->
+<!-- PACKAGES -->
+<section id="packages" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Pricing</p>
+      <h2>Flexible packages for every stage.</h2>
+      <p>All prices in ZAR. Need something in between? Skip straight to a custom quote below.</p>
+    </div>
+
+    <div class="filter-bar reveal">
+      <button class="filter-btn active" data-pkg-filter="branding">Branding</button>
+      <button class="filter-btn" data-pkg-filter="web">Web Design</button>
+      <button class="filter-btn" data-pkg-filter="social">Social Media</button>
+    </div>
+
+    <!-- Branding packages -->
+    <div class="packages-grid reveal pkg-group" data-pkg-group="branding">
       <div class="package-card">
-        <div class="package-tier">Branding</div>
         <h3>Starter Brand Pack</h3>
-        <div class="package-price">R2,000 <span>once-off</span></div>
-        <p class="package-description">Best for new small businesses needing a quick identity</p>
-        <ul class="package-features">
+        <div class="price">R2,000 <span>once-off</span></div>
+        <p class="price-note">Best for new small businesses needing a quick identity</p>
+        <ul>
           <li>Logo design (2 concepts)</li>
           <li>Basic brand colour palette</li>
           <li>Font pairing</li>
           <li>Final files (PNG, JPEG, PDF)</li>
         </ul>
-        <a href="https://wa.me/27646950715?text=I'm interested in the Starter Brand Pack (R2,000)" class="package-btn">Get Started</a>
+        <a href="#book" class="btn btn-outline" data-prefill-service="branding">Get Started</a>
       </div>
-      
-      <!-- Growth Package -->
       <div class="package-card featured">
-        <div class="package-tier">Branding</div>
         <h3>Growth Brand Pack</h3>
-        <div class="package-price">R4,500 <span>once-off</span></div>
-        <p class="package-description">For growing businesses that want a cohesive, professional look</p>
-        <ul class="package-features">
-          <li>Logo design (3-4 concepts)</li>
+        <div class="price">R4,500 <span>once-off</span></div>
+        <p class="price-note">For growing businesses that want a cohesive, professional look</p>
+        <ul>
+          <li>Logo design (3–4 concepts)</li>
           <li>Mini brand guide (fonts, colours, logo usage)</li>
           <li>Business card design</li>
-          <li>Social media profile kit (profile, cover, highlights)</li>
+          <li>Social media profile kit</li>
         </ul>
-        <a href="https://wa.me/27646950715?text=I'm interested in the Growth Brand Pack (R4,500)" class="package-btn">Get Started</a>
+        <a href="#book" class="btn btn-primary" data-prefill-service="branding">Get Started</a>
       </div>
-      
-      <!-- Premium Package -->
       <div class="package-card">
-        <div class="package-tier">Branding</div>
         <h3>Premium Brand Identity</h3>
-        <div class="package-price">R7,500 <span>once-off</span></div>
-        <p class="package-description">For companies ready to establish a solid visual presence</p>
-        <ul class="package-features">
+        <div class="price">R7,500 <span>once-off</span></div>
+        <p class="price-note">For companies ready to establish a solid visual presence</p>
+        <ul>
           <li>Comprehensive logo system (main, alternate, submark)</li>
           <li>Full brand guidelines PDF</li>
           <li>Business card, email signature, letterhead</li>
-          <li>3x Social media post templates (editable)</li>
+          <li>3× editable social post templates</li>
         </ul>
-        <a href="https://wa.me/27646950715?text=I'm interested in the Premium Brand Identity (R7,500)" class="package-btn">Get Started</a>
+        <a href="#book" class="btn btn-outline" data-prefill-service="branding">Get Started</a>
       </div>
     </div>
-    
-    <!-- Web Design Packages -->
-    <h3 style="text-align: center; font-size: 2rem; margin: 80px 0 40px; color: #fff;">Web Design & Development</h3>
-    
-    <div class="packages-grid">
+
+    <!-- Web packages -->
+    <div class="packages-grid reveal pkg-group" data-pkg-group="web" style="display:none;">
       <div class="package-card">
-        <div class="package-tier">Web Design</div>
         <h3>Landing Page</h3>
-        <div class="package-price">R3,000 <span>once-off</span></div>
-        <p class="package-description">Perfect for portfolios or single promotional pages</p>
-        <ul class="package-features">
+        <div class="price">R3,000 <span>once-off</span></div>
+        <p class="price-note">Perfect for portfolios or single promotional pages</p>
+        <ul>
           <li>1-page responsive site</li>
           <li>WhatsApp & email CTAs</li>
-          <li>Mobile optimized</li>
+          <li>Mobile optimised</li>
           <li>Basic SEO setup</li>
         </ul>
-        <a href="https://wa.me/27646950715?text=I'm interested in the Landing Page package (R3,000)" class="package-btn">Get Started</a>
+        <a href="#book" class="btn btn-outline" data-prefill-service="digital">Get Started</a>
       </div>
-      
       <div class="package-card featured">
-        <div class="package-tier">Web Design</div>
         <h3>Business Website</h3>
-        <div class="package-price">R6,500 <span>once-off</span></div>
-        <p class="package-description">Complete online presence for small to medium businesses</p>
-        <ul class="package-features">
+        <div class="price">R6,500 <span>once-off</span></div>
+        <p class="price-note">Complete online presence for small to medium businesses</p>
+        <ul>
           <li>Up to 5 pages (Home, About, Services, Gallery, Contact)</li>
           <li>SEO setup</li>
           <li>Contact form integration</li>
           <li>Mobile responsive design</li>
         </ul>
-        <a href="https://wa.me/27646950715?text=I'm interested in the Business Website package (R6,500)" class="package-btn">Get Started</a>
+        <a href="#book" class="btn btn-primary" data-prefill-service="digital">Get Started</a>
       </div>
-      
       <div class="package-card">
-        <div class="package-tier">Web Design</div>
         <h3>E-commerce Site</h3>
-        <div class="package-price">R10,000+ <span>once-off</span></div>
-        <p class="package-description">Full online store with product catalog and payments</p>
-        <ul class="package-features">
+        <div class="price">R10,000+ <span>once-off</span></div>
+        <p class="price-note">Full online store with product catalog and payments</p>
+        <ul>
           <li>Up to 10 pages</li>
           <li>Product catalog setup (WooCommerce/Shopify)</li>
           <li>Payment integration (PayFast, etc.)</li>
           <li>Admin handover + training</li>
         </ul>
-        <a href="https://wa.me/27646950715?text=I'm interested in the E-commerce Site package" class="package-btn">Get Started</a>
+        <a href="#book" class="btn btn-outline" data-prefill-service="digital">Get Started</a>
       </div>
     </div>
-    
-    <!-- Social Media Packages -->
-    <h3 style="text-align: center; font-size: 2rem; margin: 80px 0 40px; color: #fff;">Social Media Marketing</h3>
-    
-    <div class="packages-grid">
+
+    <!-- Social packages -->
+    <div class="packages-grid reveal pkg-group" data-pkg-group="social" style="display:none;">
       <div class="package-card">
-        <div class="package-tier">Monthly</div>
         <h3>Content Pack</h3>
-        <div class="package-price">R1,800 <span>/month</span></div>
-        <p class="package-description">Essential social media content for consistent posting</p>
-        <ul class="package-features">
+        <div class="price">R1,800 <span>/month</span></div>
+        <p class="price-note">Essential social media content for consistent posting</p>
+        <ul>
           <li>8 custom post designs (static)</li>
-          <li>1 story set (3-5 slides)</li>
+          <li>1 story set (3–5 slides)</li>
           <li>1 animated post (optional)</li>
         </ul>
-        <a href="https://wa.me/27646950715?text=I'm interested in the Content Pack (R1,800/month)" class="package-btn">Get Started</a>
+        <a href="#book" class="btn btn-outline" data-prefill-service="marketing">Get Started</a>
       </div>
-      
       <div class="package-card featured">
-        <div class="package-tier">Monthly</div>
         <h3>Engagement Pack</h3>
-        <div class="package-price">R3,200 <span>/month</span></div>
-        <p class="package-description">Content plus scheduling and basic management</p>
-        <ul class="package-features">
-          <li>12-16 branded posts</li>
+        <div class="price">R3,200 <span>/month</span></div>
+        <p class="price-note">Content plus scheduling and basic management</p>
+        <ul>
+          <li>12–16 branded posts</li>
           <li>Caption copywriting</li>
           <li>Basic scheduling (Facebook + Instagram)</li>
           <li>Monthly insights report</li>
         </ul>
-        <a href="https://wa.me/27646950715?text=I'm interested in the Engagement Pack (R3,200/month)" class="package-btn">Get Started</a>
+        <a href="#book" class="btn btn-primary" data-prefill-service="marketing">Get Started</a>
       </div>
-      
       <div class="package-card">
-        <div class="package-tier">Monthly</div>
         <h3>Full Social Strategy</h3>
-        <div class="package-price">R5,500 <span>/month</span></div>
-        <p class="package-description">Complete social media management and advertising</p>
-        <ul class="package-features">
+        <div class="price">R5,500 <span>/month</span></div>
+        <p class="price-note">Complete social media management and advertising</p>
+        <ul>
           <li>16+ posts (static, carousel & video)</li>
           <li>Social content calendar</li>
           <li>Paid ad management (1 campaign/month)</li>
-          <li>Community engagement</li>
           <li>Monthly performance report</li>
         </ul>
-        <a href="https://wa.me/27646950715?text=I'm interested in the Full Social Strategy (R5,500/month)" class="package-btn">Get Started</a>
+        <a href="#book" class="btn btn-outline" data-prefill-service="marketing">Get Started</a>
       </div>
     </div>
-    
-    <!-- Add-ons Section -->
-    <div style="max-width: 800px; margin: 80px auto 0; padding: 40px; background: linear-gradient(135deg, #1a1a1a, #0f0f0f); border-radius: 20px; border: 1px solid rgba(255, 71, 71, 0.1);">
-      <h3 style="text-align: center; font-size: 1.8rem; margin-bottom: 30px; color: #fff;">Add-On Services</h3>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; color: #aaa; font-size: 0.95rem;">
-        <div><strong style="color: #ff4747;">Poster/Flyer:</strong> R400 - R800</div>
-        <div><strong style="color: #ff4747;">Social Media Ad:</strong> R250 - R500</div>
-        <div><strong style="color: #ff4747;">Brochure/Catalog:</strong> R1,500 - R3,000</div>
-        <div><strong style="color: #ff4747;">Corporate Profile:</strong> R2,500 - R4,500</div>
-        <div><strong style="color: #ff4747;">Packaging Design:</strong> From R2,000</div>
-        <div><strong style="color: #ff4747;">Website Maintenance:</strong> R500 - R1,000/month</div>
-        <div><strong style="color: #ff4747;">Domain & Hosting:</strong> R800 once-off</div>
-        <div><strong style="color: #ff4747;">Copywriting:</strong> R350/page or R150/caption</div>
-      </div>
-      <p style="text-align: center; margin-top: 30px; color: #888; font-size: 0.9rem;">Free 15-minute consultation • Extended consultations: R250/hour</p>
-    </div>
-    
-    <div style="text-align: center; margin-top: 50px;">
-      <p style="color: #888; font-size: 1.1rem; margin-bottom: 20px;">Need a custom solution? Let's discuss your specific requirements.</p>
-      <a href="#contact" style="display: inline-block; padding: 15px 35px; border: 2px solid #ff4747; border-radius: 50px; font-weight: 600; transition: all 0.3s; color: #fff;">Request Custom Quote</a>
-    </div>
-  </section>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <h2>Let's Build Something Great</h2>
-    <p>Ready to transform your brand? Get in touch via WhatsApp or email to start your project.</p>
+    <div class="package-card reveal" style="max-width:900px; margin:60px auto 0;">
+      <h3 style="margin-bottom:20px;">Add-On Services</h3>
+      <ul style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:14px;">
+        <li><strong style="color:var(--text);">Poster/Flyer</strong> — R400–R800</li>
+        <li><strong style="color:var(--text);">Social Media Ad</strong> — R250–R500</li>
+        <li><strong style="color:var(--text);">Brochure/Catalog</strong> — R1,500–R3,000</li>
+        <li><strong style="color:var(--text);">Corporate Profile</strong> — R2,500–R4,500</li>
+        <li><strong style="color:var(--text);">Packaging Design</strong> — from R2,000</li>
+        <li><strong style="color:var(--text);">Website Maintenance</strong> — R500–R1,000/mo</li>
+        <li><strong style="color:var(--text);">Domain & Hosting</strong> — R800 once-off</li>
+        <li><strong style="color:var(--text);">Copywriting</strong> — R350/page or R150/caption</li>
+      </ul>
+      <p class="price-note" style="margin-top:20px;">Free 15-minute consultation • Extended consultations R250/hour</p>
+    </div>
+
+    <div class="addons-note reveal">
+      <p style="margin-bottom:20px;">Need a custom solution? Let's discuss your specific requirements.</p>
+      <a href="#book" class="btn btn-outline">Request Custom Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="book">
+  <div class="container">
+    <div class="section-head reveal" style="margin-left:auto; margin-right:auto; text-align:center; max-width:560px;">
+      <p class="eyebrow" style="text-align:center;">Book a project</p>
+      <h2>Tell me what you need — I'll take it from there.</h2>
+      <p style="margin-left:auto; margin-right:auto;">Four quick steps. Nothing is sent until you tap send on WhatsApp or your email app.</p>
+    </div>
+
+    <div class="booking-wrap reveal" id="bookingWizard">
+      <div class="booking-progress">
+        <div class="seg current"><i></i></div>
+        <div class="seg"><i></i></div>
+        <div class="seg"><i></i></div>
+        <div class="seg"><i></i></div>
+      </div>
+
+      <form id="bookingForm" onsubmit="return false;">
+        <!-- honeypot: real users never see or fill this -->
+        <div class="hp-field" aria-hidden="true">
+          <label for="field-hp">Leave this field empty</label>
+          <input type="text" id="field-hp" name="company" tabindex="-1" autocomplete="off">
+        </div>
+
+        <!-- STEP 1: SERVICE -->
+        <div class="booking-step active">
+          <p class="step-label">Step 1 of 4</p>
+          <h3>What do you need help with?</h3>
+          <div class="option-grid" data-option-group="service">
+            <button type="button" class="option-card" data-value="branding"><strong>Logo & Brand Identity</strong><span>New logo, full brand system</span></button>
+            <button type="button" class="option-card" data-value="digital"><strong>Website & Digital</strong><span>Landing page, full site, store</span></button>
+            <button type="button" class="option-card" data-value="marketing"><strong>Marketing Materials</strong><span>Social content, print, campaigns</span></button>
+            <button type="button" class="option-card" data-value="copy"><strong>Copywriting</strong><span>Website or caption copy</span></button>
+          </div>
+          <div class="booking-nav"><span class="spacer"></span><button type="button" class="btn btn-primary" data-next>Continue</button></div>
+        </div>
+
+        <!-- STEP 2: BUDGET -->
+        <div class="booking-step">
+          <p class="step-label">Step 2 of 4</p>
+          <h3>What's your rough budget?</h3>
+          <div class="option-grid" data-option-group="package">
+            <button type="button" class="option-card" data-value="under2500"><strong>Under R2,500</strong><span>Single deliverable</span></button>
+            <button type="button" class="option-card" data-value="r2500to6000"><strong>R2,500 – R6,000</strong><span>Most branding & landing pages</span></button>
+            <button type="button" class="option-card" data-value="r6000to10000"><strong>R6,000 – R10,000</strong><span>Full websites, premium branding</span></button>
+            <button type="button" class="option-card" data-value="r10000plus"><strong>R10,000+</strong><span>E-commerce, ongoing work</span></button>
+          </div>
+          <div class="booking-nav"><button type="button" class="btn btn-outline" data-back>Back</button><span class="spacer"></span><button type="button" class="btn btn-primary" data-next>Continue</button></div>
+        </div>
+
+        <!-- STEP 3: PROJECT DETAILS -->
+        <div class="booking-step">
+          <p class="step-label">Step 3 of 4</p>
+          <h3>Tell me about the project</h3>
+          <div class="field">
+            <label for="field-business">Business or project name</label>
+            <input type="text" id="field-business" maxlength="120" placeholder="e.g. Neme Hairs">
+            <span class="field-error">Please add a business or project name</span>
+          </div>
+          <div class="field">
+            <label for="field-description">What are you looking for?</label>
+            <textarea id="field-description" maxlength="800" placeholder="A few sentences on the project, your audience, and any deadline"></textarea>
+            <span class="field-error">A short description helps — at least 10 characters</span>
+          </div>
+          <div class="field">
+            <label for="field-timeline">Ideal timeline (optional)</label>
+            <select id="field-timeline">
+              <option value="">Flexible / no rush</option>
+              <option value="Within 2 weeks">Within 2 weeks</option>
+              <option value="Within a month">Within a month</option>
+              <option value="1–3 months">1–3 months</option>
+            </select>
+          </div>
+          <div class="booking-nav"><button type="button" class="btn btn-outline" data-back>Back</button><span class="spacer"></span><button type="button" class="btn btn-primary" data-next>Continue</button></div>
+        </div>
+
+        <!-- STEP 4: CONTACT -->
+        <div class="booking-step">
+          <p class="step-label">Step 4 of 4</p>
+          <h3>How should I reach you?</h3>
+          <div class="field-row">
+            <div class="field">
+              <label for="field-name">Your name</label>
+              <input type="text" id="field-name" maxlength="80" placeholder="Full name">
+              <span class="field-error">Please add your name</span>
+            </div>
+            <div class="field">
+              <label for="field-contact">Phone or email</label>
+              <input type="text" id="field-contact" maxlength="120" placeholder="083 123 4567 or you@email.com">
+              <span class="field-error">Please add a phone number or email</span>
+            </div>
+          </div>
+          <label style="display:block; font-size:0.85rem; color:var(--text-muted); margin-bottom:8px;">Send my request via</label>
+          <div class="contact-method-toggle">
+            <button type="button" class="method-btn" data-method="whatsapp">WhatsApp</button>
+            <button type="button" class="method-btn" data-method="email">Email</button>
+          </div>
+          <label class="consent-row">
+            <input type="checkbox" id="field-consent">
+            <span>I agree to the <a href="policies.html#booking" target="_blank">Booking &amp; Cancellation Policy</a> and <a href="policies.html#privacy" target="_blank">Privacy Policy</a>, and consent to being contacted about this request.</span>
+          </label>
+          <div class="booking-nav"><button type="button" class="btn btn-outline" data-back>Back</button><span class="spacer"></span><button type="button" class="btn btn-primary" data-next>Review</button></div>
+        </div>
+
+        <!-- STEP 5: REVIEW -->
+        <div class="booking-step">
+          <p class="step-label">Almost there</p>
+          <h3>Review your request</h3>
+          <div class="review-box" id="reviewBox"></div>
+          <div class="booking-nav"><button type="button" class="btn btn-outline" data-back>Back</button><span class="spacer"></span><button type="button" class="btn btn-primary" id="bookingSend">Send Request</button></div>
+        </div>
+      </form>
+
+      <div class="booking-success" id="bookingSuccess">
+        <div class="icon-check">✓</div>
+        <h3 style="font-family:var(--font-display); font-weight:500; font-size:1.3rem; margin-bottom:10px;">Your request is ready to send</h3>
+        <p style="color:var(--text-muted);">A WhatsApp or email window should have opened with your details filled in — just hit send there to complete your request.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-strip">
+  <div class="container">
+    <h2>Prefer a quick message?</h2>
+    <p>Skip the form and reach out directly via WhatsApp or email.</p>
     <div class="contact-links">
-      <a href="https://wa.me/27646950715" target="_blank" class="primary">WhatsApp Me</a>
-      <a href="mailto:masileasandile01@gmail.com" class="secondary">Send Email</a>
+      <a href="https://wa.me/27646950715" target="_blank" class="btn btn-primary">WhatsApp Me</a>
+      <a href="mailto:masileasandile01@gmail.com" class="btn btn-outline">Send Email</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <p>&copy; 2025 Sandile Masilela | Brand Identity Designer | Johannesburg, South Africa</p>
-  </footer>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Sandile Masilela</h4>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+      </div>
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <a href="https://wa.me/27646950715" target="_blank">WhatsApp</a>
+        <a href="mailto:masileasandile01@gmail.com">Email</a>
+        <a href="#book">Book a project</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="policies.html#privacy">Privacy Policy</a>
+        <a href="policies.html#terms">Terms of Service</a>
+        <a href="policies.html#booking">Booking &amp; Cancellation Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Sandile Masilela — Brand Identity Designer, Johannesburg, South Africa</p>
+      <p>All prices in ZAR, subject to change</p>
+    </div>
+  </div>
+</footer>
 
-
-  <!-- PROJECT MODAL -->
+<!-- PROJECT MODAL -->
 <div class="project-modal" id="projectModal">
   <div class="modal-content">
-    <button class="modal-close" onclick="closeModal()">&times;</button>
-    
-    <div class="modal-hero">
-      <img id="modalHeroImage" src="" alt="">
-    </div>
-    
+    <button class="modal-close" aria-label="Close">&times;</button>
+    <div class="modal-hero"><img id="modalHeroImage" src="" alt=""></div>
     <div class="modal-body">
       <div class="modal-header">
         <span class="modal-tag" id="modalTag"></span>
         <h2 class="modal-title" id="modalTitle"></h2>
       </div>
-      
-      <div class="modal-section">
-        <h3>The Challenge</h3>
-        <p id="modalChallenge"></p>
-      </div>
-
-      <div class="modal-section">
-        <h3>The Solution</h3>
-        <p id="modalSolution"></p>
-      </div>
-
-      <div class="modal-section">
-        <h3>My Approach</h3>
-        <p id="modalApproach"></p>
-      </div>
-
-      <div class="modal-section">
-        <h3>Deliverables</h3>
-        <div class="modal-deliverables" id="modalDeliverables"></div>
-      </div>
-      
-      <div class="modal-section">
-        <h3>Project Gallery</h3>
-        <div class="modal-gallery" id="modalGallery"></div>
-      </div>
+      <div class="modal-section"><h3>The Challenge</h3><p id="modalChallenge"></p></div>
+      <div class="modal-section"><h3>The Solution</h3><p id="modalSolution"></p></div>
+      <div class="modal-section"><h3>My Approach</h3><p id="modalApproach"></p></div>
+      <div class="modal-section"><h3>Deliverables</h3><div class="modal-deliverables" id="modalDeliverables"></div></div>
+      <div class="modal-section"><h3>Project Gallery</h3><div class="modal-gallery" id="modalGallery"></div></div>
     </div>
   </div>
 </div>
 
-  <script>
-    // NAVBAR SCROLL EFFECT
-    window.addEventListener('scroll', () => {
-      const nav = document.getElementById('navbar');
-      if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
-    });
-
-    // SMOOTH SCROLL
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
-  </script>
-
+<script src="js/main.js"></script>
+<script src="js/booking.js"></script>
 <script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const navLinks = document.querySelector('nav ul');
-
-  menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('active');
-    navLinks.classList.toggle('active');
-  });
-
-  // Close menu when a link is clicked
-  document.querySelectorAll('nav ul li a').forEach(link => {
-    link.addEventListener('click', () => {
-      menuToggle.classList.remove('active');
-      navLinks.classList.remove('active');
+  // Package category tabs (Branding / Web / Social)
+  const pkgFilterBtns = document.querySelectorAll('[data-pkg-filter]');
+  const pkgGroups = document.querySelectorAll('.pkg-group');
+  pkgFilterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      pkgFilterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const target = btn.dataset.pkgFilter;
+      pkgGroups.forEach(g => {
+        const isTarget = g.dataset.pkgGroup === target;
+        g.style.display = isTarget ? '' : 'none';
+        if (isTarget) g.classList.add('in-view'); // ensure it's visible even if it was hidden during initial scroll-reveal check
+      });
     });
   });
 </script>
-
-<script>
-  // PROJECT DATA
-  const projectData = {
-    somabhashi: {
-      title: 'Somabhashi Tyres & Wheels',
-      tag: 'Branding',
-      heroImage: 'IMAGES/Frame 336.png',
-      challenge: 'Client needed a bold brand identity that would stand out in the competitive automotive retail space and communicate quality and reliability to customers.',
-      approach: 'I focused on high-contrast colors for maximum visibility in retail environments. The bold typography and orange/black scheme were chosen specifically for roadside visibility and automotive industry appeal.',
-      solution: 'Created a high-contrast orange and black brand system with bold typography designed for maximum visibility in both physical retail and roadside environments.',
-      deliverables: ['Logo Design', 'Brand Identity System', 'Marketing Materials', 'Signage Concepts'],
-      gallery: ['IMAGES/Frame 336.png', 'IMAGES/Frame 336.png', 'IMAGES/Frame 336.png']
-    },
-    sompeta: {
-      title: 'Sompeta Construction & Projects',
-      tag: 'Brand Identity',
-      heroImage: 'IMAGES/business card_11.jpg',
-      challenge: 'Construction company needed professional branding to differentiate from competitors and build trust with clients.',
-      approach: 'I focused on high-contrast colors for maximum visibility in retail environments. The bold typography and orange/black scheme were chosen specifically for roadside visibility and automotive industry appeal.',
-      solution: 'Designed a geometric logo combining structure and stability symbolism, with complete brand guidelines for consistent application across all materials.',
-      deliverables: ['Logo Redesign', 'Business Cards', 'Letterhead', 'Brand Guidelines'],
-      gallery: ['IMAGES/business card_11.jpg', 'IMAGES/business card_11.jpg', 'IMAGES/business card_11.jpg']
-    },
-    audiobooks: {
-      title: 'Audiobooks Lounge',
-      tag: 'Ed-Tech',
-      heroImage: 'IMAGES/Frame 341.png',
-      challenge: 'Educational startup needed a welcoming brand that made literature accessible for students who struggle with traditional reading.',
-      approach: 'I focused on high-contrast colors for maximum visibility in retail environments. The bold typography and orange/black scheme were chosen specifically for roadside visibility and automotive industry appeal.',
-      solution: 'Created a warm, approachable brand identity emphasizing comfort and accessibility, with visual metaphors of relaxation and learning.',
-      deliverables: ['Brand Identity', 'Logo Design', 'App UI Mockups', 'Marketing Materials'],
-      gallery: ['IMAGES/Frame 341.png', 'IMAGES/Frame 341.png', 'IMAGES/Frame 341.png']
-    },
-    khanyokuhle: {
-      title: 'Khanyokuhle Projects',
-      tag: 'Corporate',
-      heroImage: 'IMAGES/khanyokuuhle-02.png',
-      challenge: 'Project management company needed a complete brand system that communicated professionalism and reliability.',
-      approach: 'I focused on high-contrast colors for maximum visibility in retail environments. The bold typography and orange/black scheme were chosen specifically for roadside visibility and automotive industry appeal.',
-      solution: 'Developed a comprehensive corporate identity with clean, modern aesthetics suitable for business presentations and client communications.',
-      deliverables: ['Brand System', 'Logo Design', 'Corporate Materials'],
-      gallery: ['IMAGES/khanyokuuhle-02.png', 'IMAGES/khanyokuuhle-02.png', 'IMAGES/khanyokuuhle-02.png']
-    },
-    automotive: {
-      title: 'Automotive Social Campaign',
-      tag: 'Campaign Concept',
-      heroImage: 'IMAGES/chery tiggo 4 pro.png',
-      challenge: 'Self-initiated concept exploring social media marketing for automotive industry, balancing aspirational and accessible messaging.',
-      approach: 'I focused on high-contrast colors for maximum visibility in retail environments. The bold typography and orange/black scheme were chosen specifically for roadside visibility and automotive industry appeal.',
-      solution: 'Bold lifestyle-driven design blending product photography with emotional storytelling to position vehicles as both aspirational and accessible.',
-      deliverables: ['Social Media Campaign', 'Visual Concept', 'Marketing Strategy'],
-      gallery: ['IMAGES/chery tiggo 4 pro.png', 'IMAGES/chery tiggo 4 pro.png', 'IMAGES/chery tiggo 4 pro.png']
-    },
-    neme: {
-      title: 'Neme Hairs',
-      tag: 'Logo & Marketing',
-      heroImage: 'IMAGES/Frame 352.png',
-      challenge: 'Hair salon needed a modern brand identity that reflected elegance and confidence while appealing to diverse clientele.',
-      approach: 'I focused on high-contrast colors for maximum visibility in retail environments. The bold typography and orange/black scheme were chosen specifically for roadside visibility and automotive industry appeal.',
-      solution: 'Created sleek, sophisticated visual identity with cohesive marketing materials emphasizing premium quality and personal care.',
-      deliverables: ['Logo Design', 'Brand Identity', 'Marketing Materials'],
-      gallery: ['IMAGES/Frame 352.png', 'IMAGES/Frame 352.png', 'IMAGES/Frame 352.png']
-    }
-  };
-  
-  // OPEN MODAL
-  function openModal(projectId) {
-    const modal = document.getElementById('projectModal');
-    const project = projectData[projectId];
-    
-    if (!project) return;
-    
-    document.getElementById('modalHeroImage').src = project.heroImage;
-    document.getElementById('modalTag').textContent = project.tag;
-    document.getElementById('modalTitle').textContent = project.title;
-    document.getElementById('modalChallenge').textContent = project.challenge;
-    document.getElementById('modalSolution').textContent = project.solution;
-    document.getElementById('modalApproach').textContent = project.approach;
-    
-    const deliverablesContainer = document.getElementById('modalDeliverables');
-    deliverablesContainer.innerHTML = project.deliverables.map(item => `<div class="deliverable-item">${item}</div>`).join('');
-    
-    const galleryContainer = document.getElementById('modalGallery');
-    galleryContainer.innerHTML = project.gallery.map(img => `<img src="${img}" alt="${project.title}">`).join('');
-    
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-  
-  // CLOSE MODAL
-  function closeModal() {
-    const modal = document.getElementById('projectModal');
-    modal.classList.remove('active');
-    document.body.style.overflow = 'auto';
-  }
-  
-  // Close on click outside
-  document.getElementById('projectModal').addEventListener('click', function(e) {
-    if (e.target === this) closeModal();
-  });
-  
-  // Close on ESC key
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeModal();
-  });
-  </script>
-
 </body>
 </html>
