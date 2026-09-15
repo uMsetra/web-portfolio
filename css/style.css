@@ -807,6 +807,7 @@ header#home h1 .rotator {
   display: block;
   font-size: 0.95rem;
   margin-bottom: 4px;
+  color: var(--text);
 }
 
 .option-card span {
