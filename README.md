@@ -23,6 +23,17 @@
   - All dynamic text is escaped before being inserted into the page (prevents script injection via the project modal / form)
 - **New `policies.html`**: tabbed Privacy Policy, Terms of Service, and Booking & Cancellation Policy, linked from the footer and from the booking form's consent checkbox. Written with POPIA (South Africa's data protection law) in mind.
 
+## New: recruiter path (`hire.html`)
+
+- A "Hiring? / Need a project?" toggle now sits at the top of the nav on every page, so recruiters and clients each land on the right experience.
+- `hire.html` is built from your real CV and 2026 portfolio PDF: professional summary, skills, a proper experience timeline (Commercial Autoparts, TenOne Venture Group, Kaypat Medical Centre), education/certifications, and 7 deep case studies (Fusi Dental Clinic, Deployed Ants, Sompeta, Somahhashi Wheels & Tyres, Marong-Rong, Khanyokuhle, Mosebela) — each with brief, solution, real color palette, and deliverables straight from your portfolio PDF.
+- **To finish this page you need to add two things to your repo:**
+  1. **`resume.pdf`** at the repo root — your actual CV file, renamed to `resume.pdf`. The "Download Resume" buttons point here.
+  2. **Case study images** in `IMAGES/`, named to match what `hire.html` expects: `case-fusi.jpg`, `case-deployedants.jpg`, `case-sompeta.jpg`, `case-somahhashi.jpg`, `case-marongrong.jpg`, `case-khanyokuhle.jpg`, `case-mosebela.jpg`. Use the mockup images from your portfolio PDF (export them as images, or I can help crop them if you upload the PDF's source images).
+  3. **"More Work" gallery images** in `IMAGES/`: `poster-autoparts-engines.jpg`, `poster-autoparts-parts.jpg`, `poster-autoparts-crashdeals.jpg`, `logo-bestea.jpg`, `poster-lamborghini.jpg`, `poster-cemair.jpg`, `poster-dodge.jpg` — the quick-hit logos/posters from your portfolio PDF, shown below the case studies without full write-ups.
+- I used `cedricmasilela@gmail.com` and your LinkedIn (`linkedin.com/in/morris-masilela-65099220b`) from your CV for this page — separate from the WhatsApp/email used in client bookings. Let me know if you'd rather unify these.
+- `preview-hire.html` is a self-contained preview of this page (placeholder images/colors) — same rule as `preview.html`: for viewing only, not for deployment.
+
 ## Things worth double-checking / personalizing before you go live
 
 - **Policies are a strong starting template, not legal advice** — if this becomes a real registered business, worth a quick review by a SA attorney, especially the deposit % and refund terms in the Terms of Service, which I set at a common freelance default (50% deposit, non-refundable once work starts).
