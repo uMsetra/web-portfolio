@@ -1507,7 +1507,7 @@ footer {
   width: 100%;
   flex: 1;
   min-height: 0;
-  object-fit: contain;
+  object-fit: cover;
   padding: 26px;
   transition: transform 0.4s var(--ease);
 }
@@ -1555,7 +1555,7 @@ footer {
 .quickwork-item img {
   width: 100%;
   aspect-ratio: 4/3;
-  object-fit: contain;
+  object-fit: cover;
   background: var(--surface);
   padding: 22px;
   border-radius: var(--radius-sm);
