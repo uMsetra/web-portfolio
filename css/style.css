@@ -1113,26 +1113,6 @@ footer {
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
-/* Logo-based modals (hire.html) — contain so the mark isn't cropped */
-#caseModal .modal-hero img {
-  object-fit: contain;
-  background: var(--surface);
-  padding: 30px;
-  height: 300px;
-}
-
-#caseModal .modal-gallery img {
-  object-fit: contain;
-  background: var(--surface);
-  padding: 18px;
-  border: 1px solid var(--border);
-}
-
-#caseModal .modal-gallery {
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
-}
-
 .modal-body { padding: 40px; }
 
 .modal-tag {
@@ -1489,51 +1469,6 @@ footer {
   letter-spacing: 0.03em;
 }
 
-/* Logo/brand-asset cards — show the whole image, never crop it.
-   Used on hire.html where images are logos rather than photos. */
-.project-grid.grid-contain {
-  gap: 24px;
-}
-
-.project-card.card-contain {
-  aspect-ratio: 4/3;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-}
-
-.project-card.card-contain img {
-  width: 100%;
-  flex: 1;
-  min-height: 0;
-  object-fit: cover;
-  padding: 26px;
-  transition: transform 0.4s var(--ease);
-}
-
-.project-card.card-contain:hover img {
-  transform: scale(1.03);
-}
-
-/* Caption sits below the image instead of overlaying it, so logos stay readable */
-.project-card.card-contain .overlay {
-  position: static;
-  background: none;
-  margin: 0 18px;
-  padding: 14px 0 18px;
-  border-top: 1px solid var(--border);
-}
-
-.project-card.card-contain .tag {
-  font-size: 0.72rem;
-  margin-bottom: 3px;
-}
-
-.project-card.card-contain h3 {
-  font-size: 0.95rem;
-}
-
 .quickwork-subhead {
   font-family: var(--font-display);
   font-size: 0.8rem;
@@ -1556,15 +1491,8 @@ footer {
   width: 100%;
   aspect-ratio: 4/3;
   object-fit: cover;
-  background: var(--surface);
-  padding: 22px;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border);
-  transition: border-color 0.25s;
-}
-
-.quickwork-item:hover img {
-  border-color: var(--border-strong);
 }
 
 .quickwork-item span {
