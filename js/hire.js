@@ -12,7 +12,7 @@ const caseStudies = {
     solution: 'A distinctive tooth-based monogram, supported by calming turquoise and charcoal, creates a clean and confident healthcare brand.',
     deliverables: ['Logo & Monogram', 'Signage', 'Staff Uniform Branding', 'Brochure', 'Booking App Mockup'],
     palette: [['#2C323E', '2C323E'], ['#57C3CF', '57C3CF'], ['#FFFFFF', 'FFFFFF']],
-    gallery: ['IMAGES/ASSETS/EXTERIOR SIGNAGE.png', 'IMAGES/ASSETS/RECEPTION SIGN.png']
+    gallery: ['IMAGES/FUSI DENTAL .png', 'IMAGES/FUSI DENTAL .png']
   },
   deployedants: {
     title: 'Deployed Ants',
@@ -23,7 +23,7 @@ const caseStudies = {
     solution: 'A geometric ant-inspired monogram and high-contrast palette communicate collaboration, intelligent problem-solving and purposeful development.',
     deliverables: ['Logo & Monogram', 'Merchandise (Hoodie, Sleeve, Notebook)', 'Proposal & Tender Documents'],
     palette: [['#D15D33', 'D15D33'], ['#110F0F', '110F0F'], ['#E2E2E2', 'E2E2E2']],
-    gallery: ['IMAGES/ASSETS/DEPLOYED 1.png', 'IMAGES/ASSETS/DEPLOYED 2.png']
+    gallery: ['IMAGES/DEPLOYED ANTS.png', 'IMAGES/DEPLOYED ANTS.png']
   },
   sompeta: {
     title: 'Sompeta Construction & Projects',
@@ -34,7 +34,7 @@ const caseStudies = {
     solution: 'The architectural symbol combines buildings with the letter "S", creating a strong visual foundation for a dependable construction brand.',
     deliverables: ['Logo Design', 'Tender & Company Profile Documents', 'Site Signage', 'Vehicle Branding'],
     palette: [['#0B1320', '0B1320'], ['#FFFFFF', 'FFFFFF'], ['#DD631A', 'DD631A']],
-    gallery: ['IMAGES/ASSETS/Construction board.png', 'IMAGES/ASSETS/DEPLOYED 9.png']
+    gallery: ['IMAGES/SOMPETA.png', 'IMAGES/SOMPETA.png']
   },
   somahhashi: {
     title: 'Somahhashi Wheels & Tyres',
@@ -45,7 +45,7 @@ const caseStudies = {
     solution: 'The powerful horse and bold "HH" symbol communicate movement, strength and dependable performance across every road.',
     deliverables: ['Logo Design', 'Signage', 'Workwear', 'Quotation & Business Card Stationery'],
     palette: [['#EA5B0C', 'EA5B0C'], ['#010413', '010413'], ['#FFFFFF', 'FFFFFF']],
-    gallery: ['IMAGES/ASSETS/DEPLOYED 15.png', 'IMAGES/ASSETS/DEPLOYED 14.png']
+    gallery: ['IMAGES/Frame 336.png', 'IMAGES/Frame 336.png']
   },
   marongrong: {
     title: 'Marong-Rong Cash Loans',
@@ -55,8 +55,8 @@ const caseStudies = {
     brief: 'Establish an accessible lending brand offering customers a clear, convenient and trustworthy borrowing experience.',
     solution: 'The fast-moving wallet symbol and confident green palette communicate quick service, financial accessibility and responsible support.',
     deliverables: ['Logo Design', 'Storefront Signage', 'Loan Application Stationery', 'App UI Mockup'],
-    palette: [['#078A58', '078A58'], ['#111111', '111111'], ['#FFFFFF', 'FFFFFF']],
-    gallery: ['IMAGES/ASSETS/khanyo 1.png', 'IMAGES/ASSETS/khanyo 3.png']
+    palette: [['#2C323E', '2C323E'], ['#111111', '111111'], ['#FFFFFF', 'FFFFFF']],
+    gallery: ['IMAGES/marong rong.png', 'IMAGES/marong rong.png']
   },
   khanyokuhle: {
     title: 'Khanyokuhle Projects',
@@ -67,7 +67,7 @@ const caseStudies = {
     solution: 'The folder, cityscape and upward graph combine into a structured identity representing organisation, financial clarity and sustainable growth.',
     deliverables: ['Logo Design', 'Client Document System', 'Invoice Stationery', 'Dashboard UI Mockup'],
     palette: [['#005E1B', '005E1B'], ['#FFFFFF', 'FFFFFF'], ['#1C1C1C', '1C1C1C']],
-    gallery: ['IMAGES/ASSETS/khanyo 5.png', 'IMAGES/ASSETS/khanyo 6.png']
+    gallery: ['IMAGES/khanyokuhle.png', 'IMAGES/khanyokuhle.png']
   },
   mosebela: {
     title: 'Mosebela',
@@ -78,7 +78,7 @@ const caseStudies = {
     solution: 'A structured and adaptable identity system communicates professionalism, progress and meaningful impact across multiple service areas.',
     deliverables: ['Logo Design', 'Signage', 'Company Profile', 'Invoice & Stationery Set', 'Social Campaign'],
     palette: [['#162855', '162855'], ['#C29634', 'C29634'], ['#FFFFFF', 'FFFFFF']],
-    gallery: ['IMAGES/ASSETS/Brand package.png', 'IMAGES/ASSETS/INSTAGRAM INTRODUCTION POST.png']
+    gallery: ['IMAGES/PRIMARY LOGO.png', 'IMAGES/PRIMARY LOGO.png']
   },
   audiobooks: {
     title: 'Audiobooks Lounge',
@@ -88,8 +88,8 @@ const caseStudies = {
     brief: 'An educational startup needed a welcoming brand that made literature accessible for students who struggle with traditional reading.',
     solution: 'A warm, approachable brand identity emphasising comfort and accessibility, built on visual metaphors of relaxation and ease to lower the barrier to entry for reluctant readers.',
     deliverables: ['Brand Identity', 'Logo Design', 'App UI Mockups', 'Marketing Materials'],
-    palette: [['#D9C6A5', 'D9C6A5'], ['#D67A5D', 'D67A5D'], ['#FFFFFF', 'FFFFFF']],
-    gallery: ['IMAGES/ASSETS/Audiobooks-Lounge_Carousel_01.png', 'IMAGES/ASSETS/Audiobooks-Lounge_Carousel_03.png']
+    palette: [],
+    gallery: ['IMAGES/AUDIOBOOKS LOUNGE.png', 'IMAGES/AUDIOBOOKS LOUNGE.png']
   },
   bestea: {
     title: 'Bestea',
@@ -99,8 +99,8 @@ const caseStudies = {
     brief: 'A concept cookie brand designed to appeal across every age group and market segment — the perfect snack to pair with your tea, hence "Bestea."',
     solution: 'A friendly, character-led mark built around a warm cookie mascot, giving the brand an approachable, universal feel that works as easily on packaging as it does on social media.',
     deliverables: ['Logo & Mascot Design'],
-    palette: [['#FEC504', 'FEC504'], ['#D78333', 'D78333'], ['#000000', '000000'], ['#FEFEFE', 'FEFEFE']],
-    gallery: ['IMAGES/ASSETS/Bestea_Outdoor_Mockup.png', 'IMAGES/ASSETS/Bestea-1.png']
+    palette: [],
+    gallery: ['IMAGES/logo-bestea.jpg', 'IMAGES/logo-bestea.jpg']
   }
 };
 
@@ -167,43 +167,3 @@ if (caseModalEl) {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeCaseModal();
 });
-
-// ==========================================================================
-// LIGHTBOX — full-image view for the More Work gallery
-// ==========================================================================
-(function () {
-  const lightbox = document.getElementById('lightbox');
-  if (!lightbox) return;
-
-  const lbImage = document.getElementById('lightboxImage');
-  const lbCaption = document.getElementById('lightboxCaption');
-
-  function openLightbox(src, caption) {
-    lbImage.src = src;
-    lbImage.alt = caption;
-    lbCaption.textContent = caption;
-    lightbox.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeLightbox() {
-    lightbox.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  document.querySelectorAll('.quickwork-item img').forEach(img => {
-    img.addEventListener('click', () => {
-      const caption = img.closest('.quickwork-item').querySelector('span')?.textContent || img.alt;
-      openLightbox(img.src, caption);
-    });
-  });
-
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) closeLightbox();
-  });
-  lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeLightbox();
-  });
-})();

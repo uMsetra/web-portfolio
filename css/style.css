@@ -1469,6 +1469,18 @@ footer {
   letter-spacing: 0.03em;
 }
 
+/* ==========================================================================
+   EXPANDABLE GRIDS ("Show More" — reactive to screen size)
+   ========================================================================== */
+.is-capped {
+  display: none !important;
+}
+
+.show-more-wrap {
+  text-align: center;
+  margin-top: 32px;
+}
+
 .quickwork-subhead {
   font-family: var(--font-display);
   font-size: 0.8rem;

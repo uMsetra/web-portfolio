@@ -34,6 +34,18 @@
 - I used `cedricmasilela@gmail.com` and your LinkedIn (`linkedin.com/in/morris-masilela-65099220b`) from your CV for this page — separate from the WhatsApp/email used in client bookings. Let me know if you'd rather unify these.
 - `preview-hire.html` is a self-contained preview of this page (placeholder images/colors) — same rule as `preview.html`: for viewing only, not for deployment.
 
+## Client site now shares the full project library
+
+- `index.html`'s Work section now has all 11 projects (the original 6 plus Fusi Dental Clinic, Deployed Ants, Marong-Rong, Mosebela, and Bestea from the recruiter page), with 3 new filter categories (Health, Tech, Finance) to match.
+- Renamed `somabhashi` → `somahhashi` everywhere (matches the real logo spelling) — if anything in your own notes still says "Somabhashi," that's the reason for the change.
+- Added a client-facing **More Work** section (posters, campaign concepts, logo marks) — same images as the recruiter page's More Work section, reframed without the employer-specific language that only makes sense on the resume page.
+
+## "Show More" on every image grid
+
+Every grid on both pages (`index.html` Work + More Work, `hire.html` Case Studies + More Work) now shows a capped number of items and reveals the rest on click — the cap adjusts by screen size (desktop/tablet/mobile) via `data-show-desktop` / `data-show-tablet` / `data-show-mobile` attributes on each grid's wrapper `<div class="expand-block">`. The logic lives once in `js/main.js` (`initExpandableGrid`), shared by both pages. On `index.html`, it also plays nicely with the category filter — filtering resets the "Show More" state to the first batch of whatever's currently filtered.
+
+The lightbox (click-to-enlarge) also moved from `js/hire.js` into the shared `js/main.js`, and now works on `index.html`'s new More Work section too, not just the recruiter page.
+
 ## Things worth double-checking / personalizing before you go live
 
 - **Policies are a strong starting template, not legal advice** — if this becomes a real registered business, worth a quick review by a SA attorney, especially the deposit % and refund terms in the Terms of Service, which I set at a common freelance default (50% deposit, non-refundable once work starts).
