@@ -91,16 +91,16 @@ const caseStudies = {
     palette: [],
     gallery: ['IMAGES/AUDIOBOOKS LOUNGE.png', 'IMAGES/AUDIOBOOKS LOUNGE.png']
   },
-  bestea: {
-    title: 'Bestea',
-    industry: 'Food & Beverage — Concept Brand',
-    role: 'Brand Designer (Self-Initiated Concept)',
-    heroImage: 'IMAGES/logo-bestea.jpg',
-    brief: 'A concept cookie brand designed to appeal across every age group and market segment — the perfect snack to pair with your tea, hence "Bestea."',
-    solution: 'A friendly, character-led mark built around a warm cookie mascot, giving the brand an approachable, universal feel that works as easily on packaging as it does on social media.',
-    deliverables: ['Logo & Mascot Design'],
+  ndebelecollage: {
+    title: 'Ndebele Collage',
+    industry: 'Design — Concept Piece',
+    role: 'Concept Designer (Self-Initiated)',
+    heroImage: 'IMAGES/MORE WORK/ndebele-collage.jpeg',
+    brief: '[Add a one-line brief for this piece — what it was exploring or responding to]',
+    solution: '[Add a short description of the design approach and outcome]',
+    deliverables: ['Concept Design'],
     palette: [],
-    gallery: ['IMAGES/logo-bestea.jpg', 'IMAGES/logo-bestea.jpg']
+    gallery: ['IMAGES/MORE WORK/ndebele-collage.jpeg', 'IMAGES/MORE WORK/ndebele-collage.jpeg']
   }
 };
 
