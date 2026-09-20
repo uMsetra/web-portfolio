@@ -138,3 +138,43 @@ if (caseModalEl) {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeCaseModal();
 });
+
+// ==========================================================================
+// LIGHTBOX — full-image view for the More Work gallery
+// ==========================================================================
+(function () {
+  const lightbox = document.getElementById('lightbox');
+  if (!lightbox) return;
+
+  const lbImage = document.getElementById('lightboxImage');
+  const lbCaption = document.getElementById('lightboxCaption');
+
+  function openLightbox(src, caption) {
+    lbImage.src = src;
+    lbImage.alt = caption;
+    lbCaption.textContent = caption;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.quickwork-item img').forEach(img => {
+    img.addEventListener('click', () => {
+      const caption = img.closest('.quickwork-item').querySelector('span')?.textContent || img.alt;
+      openLightbox(img.src, caption);
+    });
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+})();
