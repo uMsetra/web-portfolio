@@ -55,7 +55,7 @@ const caseStudies = {
     brief: 'Establish an accessible lending brand offering customers a clear, convenient and trustworthy borrowing experience.',
     solution: 'The fast-moving wallet symbol and confident green palette communicate quick service, financial accessibility and responsible support.',
     deliverables: ['Logo Design', 'Storefront Signage', 'Loan Application Stationery', 'App UI Mockup'],
-    palette: [['#2C323E', '2C323E'], ['#111111', '111111'], ['#FFFFFF', 'FFFFFF']],
+    palette: [['#078A58', '078A58'], ['#111111', '111111'], ['#FFFFFF', 'FFFFFF']],
     gallery: ['IMAGES/ASSETS/khanyo 1.png', 'IMAGES/ASSETS/khanyo 3.png']
   },
   khanyokuhle: {
@@ -88,7 +88,7 @@ const caseStudies = {
     brief: 'An educational startup needed a welcoming brand that made literature accessible for students who struggle with traditional reading.',
     solution: 'A warm, approachable brand identity emphasising comfort and accessibility, built on visual metaphors of relaxation and ease to lower the barrier to entry for reluctant readers.',
     deliverables: ['Brand Identity', 'Logo Design', 'App UI Mockups', 'Marketing Materials'],
-    palette: [],
+    palette: [['#D9C6A5', 'D9C6A5'], ['#D67A5D', 'D67A5D'], ['#FFFFFF', 'FFFFFF']],
     gallery: ['IMAGES/ASSETS/Audiobooks-Lounge_Carousel_01.png', 'IMAGES/ASSETS/Audiobooks-Lounge_Carousel_03.png']
   },
   bestea: {
@@ -99,7 +99,7 @@ const caseStudies = {
     brief: 'A concept cookie brand designed to appeal across every age group and market segment — the perfect snack to pair with your tea, hence "Bestea."',
     solution: 'A friendly, character-led mark built around a warm cookie mascot, giving the brand an approachable, universal feel that works as easily on packaging as it does on social media.',
     deliverables: ['Logo & Mascot Design'],
-    palette: [],
+    palette: [['#FEC504', 'FEC504'], ['#D78333', 'D78333'], ['#000000', '000000'], ['#FEFEFE', 'FEFEFE']],
     gallery: ['IMAGES/ASSETS/Bestea_Outdoor_Mockup.png', 'IMAGES/ASSETS/Bestea-1.png']
   }
 };
