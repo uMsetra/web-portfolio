@@ -79,7 +79,30 @@ const caseStudies = {
     deliverables: ['Logo Design', 'Signage', 'Company Profile', 'Invoice & Stationery Set', 'Social Campaign'],
     palette: [['#162855', '162855'], ['#C29634', 'C29634'], ['#FFFFFF', 'FFFFFF']],
     gallery: ['IMAGES/PRIMARY LOGO.png', 'IMAGES/PRIMARY LOGO.png']
-  }
+  },
+  Audiobookslounge: {
+    title: 'Audiobooks Lounge',
+    industry: 'E-learning / Education',
+    role: 'Brand Designer',
+    heroImage: 'IMAGES/PRIMARY LOGO.png',
+    brief: 'Create a flexible corporate identity for a purpose-driven company operating across property, tax, registration and general business services.',
+    solution: 'A structured and adaptable identity system communicates professionalism, progress and meaningful impact across multiple service areas.',
+    deliverables: ['Logo Design', 'Signage', 'Company Profile', 'Invoice & Stationery Set', 'Social Campaign'],
+    palette: [['#162855', '162855'], ['#C29634', 'C29634'], ['#FFFFFF', 'FFFFFF']],
+    gallery: ['IMAGES/PRIMARY LOGO.png', 'IMAGES/PRIMARY LOGO.png']
+  },
+  Besteacookies: {
+    title: 'Bestea Cookies',
+    industry: 'Food and Beverages / Food',
+    role: 'Brand Designer',
+    heroImage: 'IMAGES/PRIMARY LOGO.png',
+    brief: 'Create a flexible corporate identity for a purpose-driven company operating across property, tax, registration and general business services.',
+    solution: 'A structured and adaptable identity system communicates professionalism, progress and meaningful impact across multiple service areas.',
+    deliverables: ['Logo Design', 'Signage', 'Company Profile', 'Invoice & Stationery Set', 'Social Campaign'],
+    palette: [['#162855', '162855'], ['#C29634', 'C29634'], ['#FFFFFF', 'FFFFFF']],
+    gallery: ['IMAGES/PRIMARY LOGO.png', 'IMAGES/PRIMARY LOGO.png']
+  },
+  
 };
 
 function escapeHTMLHire(str) {
