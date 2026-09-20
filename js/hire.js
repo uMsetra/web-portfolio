@@ -1,6 +1,6 @@
 // ==========================================================================
 // RECRUITER PAGE — CASE STUDY DATA + MODAL
-// Sourced directly from Sandile's 2026 design portfolio PDF.
+// Sourced directly from Sandile's 2026 design portfolio PDF and CV.
 // ==========================================================================
 const caseStudies = {
   fusi: {
@@ -80,29 +80,28 @@ const caseStudies = {
     palette: [['#162855', '162855'], ['#C29634', 'C29634'], ['#FFFFFF', 'FFFFFF']],
     gallery: ['IMAGES/PRIMARY LOGO.png', 'IMAGES/PRIMARY LOGO.png']
   },
-  Audiobookslounge: {
+  audiobooks: {
     title: 'Audiobooks Lounge',
-    industry: 'E-learning / Education',
+    industry: 'Education / E-Learning',
     role: 'Brand Designer',
-    heroImage: 'IMAGES/PRIMARY LOGO.png',
-    brief: 'Create a flexible corporate identity for a purpose-driven company operating across property, tax, registration and general business services.',
-    solution: 'A structured and adaptable identity system communicates professionalism, progress and meaningful impact across multiple service areas.',
-    deliverables: ['Logo Design', 'Signage', 'Company Profile', 'Invoice & Stationery Set', 'Social Campaign'],
-    palette: [['#162855', '162855'], ['#C29634', 'C29634'], ['#FFFFFF', 'FFFFFF']],
-    gallery: ['IMAGES/PRIMARY LOGO.png', 'IMAGES/PRIMARY LOGO.png']
+    heroImage: 'IMAGES/AUDIOBOOKS LOUNGE.png',
+    brief: 'An educational startup needed a welcoming brand that made literature accessible for students who struggle with traditional reading.',
+    solution: 'A warm, approachable brand identity emphasising comfort and accessibility, built on visual metaphors of relaxation and ease to lower the barrier to entry for reluctant readers.',
+    deliverables: ['Brand Identity', 'Logo Design', 'App UI Mockups', 'Marketing Materials'],
+    palette: [],
+    gallery: ['IMAGES/AUDIOBOOKS LOUNGE.png', 'IMAGES/AUDIOBOOKS LOUNGE.png']
   },
-  Besteacookies: {
-    title: 'Bestea Cookies',
-    industry: 'Food and Beverages / Food',
-    role: 'Brand Designer',
-    heroImage: 'IMAGES/PRIMARY LOGO.png',
-    brief: 'Create a flexible corporate identity for a purpose-driven company operating across property, tax, registration and general business services.',
-    solution: 'A structured and adaptable identity system communicates professionalism, progress and meaningful impact across multiple service areas.',
-    deliverables: ['Logo Design', 'Signage', 'Company Profile', 'Invoice & Stationery Set', 'Social Campaign'],
-    palette: [['#162855', '162855'], ['#C29634', 'C29634'], ['#FFFFFF', 'FFFFFF']],
-    gallery: ['IMAGES/PRIMARY LOGO.png', 'IMAGES/PRIMARY LOGO.png']
-  },
-  
+  bestea: {
+    title: 'Bestea',
+    industry: 'Food & Beverage — Concept Brand',
+    role: 'Brand Designer (Self-Initiated Concept)',
+    heroImage: 'IMAGES/logo-bestea.jpg',
+    brief: 'A concept cookie brand designed to appeal across every age group and market segment — the perfect snack to pair with your tea, hence "Bestea."',
+    solution: 'A friendly, character-led mark built around a warm cookie mascot, giving the brand an approachable, universal feel that works as easily on packaging as it does on social media.',
+    deliverables: ['Logo & Mascot Design'],
+    palette: [],
+    gallery: ['IMAGES/logo-bestea.jpg', 'IMAGES/logo-bestea.jpg']
+  }
 };
 
 function escapeHTMLHire(str) {
@@ -128,10 +127,17 @@ function openCaseModal(id) {
   document.getElementById('caseDeliverables').innerHTML =
     c.deliverables.map(d => `<div class="deliverable-item">${escapeHTMLHire(d)}</div>`).join('');
 
-  document.getElementById('casePalette').innerHTML =
-    c.palette.map(([hex, label]) =>
-      `<div class="palette-swatch"><div class="chip" style="background:${hex}"></div><span>${escapeHTMLHire(label)}</span></div>`
-    ).join('');
+  // Palette section only renders if real colors are provided — no guessed hex codes
+  const paletteSection = document.getElementById('casePaletteSection');
+  if (c.palette && c.palette.length) {
+    document.getElementById('casePalette').innerHTML =
+      c.palette.map(([hex, label]) =>
+        `<div class="palette-swatch"><div class="chip" style="background:${hex}"></div><span>${escapeHTMLHire(label)}</span></div>`
+      ).join('');
+    if (paletteSection) paletteSection.style.display = '';
+  } else {
+    if (paletteSection) paletteSection.style.display = 'none';
+  }
 
   document.getElementById('caseGallery').innerHTML =
     c.gallery.map(img => `<img src="${escapeHTMLHire(img)}" alt="${escapeHTMLHire(c.title)}">`).join('');
