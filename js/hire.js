@@ -12,7 +12,7 @@ const caseStudies = {
     solution: 'A distinctive tooth-based monogram, supported by calming turquoise and charcoal, creates a clean and confident healthcare brand.',
     deliverables: ['Logo & Monogram', 'Signage', 'Staff Uniform Branding', 'Brochure', 'Booking App Mockup'],
     palette: [['#2C323E', '2C323E'], ['#57C3CF', '57C3CF'], ['#FFFFFF', 'FFFFFF']],
-    gallery: ['IMAGES/FUSI DENTAL .png', 'IMAGES/FUSI DENTAL .png']
+    gallery: ['IMAGES/ASSETS/EXTERIOR SIGNAGE.png', 'IMAGES/ASSETS/RECEPTION SIGN.png']
   },
   deployedants: {
     title: 'Deployed Ants',
@@ -23,7 +23,7 @@ const caseStudies = {
     solution: 'A geometric ant-inspired monogram and high-contrast palette communicate collaboration, intelligent problem-solving and purposeful development.',
     deliverables: ['Logo & Monogram', 'Merchandise (Hoodie, Sleeve, Notebook)', 'Proposal & Tender Documents'],
     palette: [['#D15D33', 'D15D33'], ['#110F0F', '110F0F'], ['#E2E2E2', 'E2E2E2']],
-    gallery: ['IMAGES/DEPLOYED ANTS.png', 'IMAGES/DEPLOYED ANTS.png']
+    gallery: ['IMAGES/ASSETS/DEPLOYED 1.png', 'IMAGES/ASSETS/DEPLOYED 2.png']
   },
   sompeta: {
     title: 'Sompeta Construction & Projects',
@@ -34,7 +34,7 @@ const caseStudies = {
     solution: 'The architectural symbol combines buildings with the letter "S", creating a strong visual foundation for a dependable construction brand.',
     deliverables: ['Logo Design', 'Tender & Company Profile Documents', 'Site Signage', 'Vehicle Branding'],
     palette: [['#0B1320', '0B1320'], ['#FFFFFF', 'FFFFFF'], ['#DD631A', 'DD631A']],
-    gallery: ['IMAGES/SOMPETA.png', 'IMAGES/SOMPETA.png']
+    gallery: ['IMAGES/ASSETS/Construction board.png', 'IMAGES/ASSETS/DEPLOYED 9.png']
   },
   somahhashi: {
     title: 'Somahhashi Wheels & Tyres',
@@ -45,7 +45,7 @@ const caseStudies = {
     solution: 'The powerful horse and bold "HH" symbol communicate movement, strength and dependable performance across every road.',
     deliverables: ['Logo Design', 'Signage', 'Workwear', 'Quotation & Business Card Stationery'],
     palette: [['#EA5B0C', 'EA5B0C'], ['#010413', '010413'], ['#FFFFFF', 'FFFFFF']],
-    gallery: ['IMAGES/Frame 336.png', 'IMAGES/Frame 336.png']
+    gallery: ['IMAGES/ASSETS/DEPLOYED 15.png', 'IMAGES/ASSETS/DEPLOYED 14.png']
   },
   marongrong: {
     title: 'Marong-Rong Cash Loans',
@@ -56,7 +56,7 @@ const caseStudies = {
     solution: 'The fast-moving wallet symbol and confident green palette communicate quick service, financial accessibility and responsible support.',
     deliverables: ['Logo Design', 'Storefront Signage', 'Loan Application Stationery', 'App UI Mockup'],
     palette: [['#2C323E', '2C323E'], ['#111111', '111111'], ['#FFFFFF', 'FFFFFF']],
-    gallery: ['IMAGES/marong rong.png', 'IMAGES/marong rong.png']
+    gallery: ['IMAGES/ASSETS/khanyo 1.png', 'IMAGES/ASSETS/khanyo 3.png']
   },
   khanyokuhle: {
     title: 'Khanyokuhle Projects',
@@ -67,7 +67,7 @@ const caseStudies = {
     solution: 'The folder, cityscape and upward graph combine into a structured identity representing organisation, financial clarity and sustainable growth.',
     deliverables: ['Logo Design', 'Client Document System', 'Invoice Stationery', 'Dashboard UI Mockup'],
     palette: [['#005E1B', '005E1B'], ['#FFFFFF', 'FFFFFF'], ['#1C1C1C', '1C1C1C']],
-    gallery: ['IMAGES/khanyokuhle.png', 'IMAGES/khanyokuhle.png']
+    gallery: ['IMAGES/ASSETS/khanyo 5.png', 'IMAGES/ASSETS/khanyo 6.png']
   },
   mosebela: {
     title: 'Mosebela',
@@ -78,7 +78,7 @@ const caseStudies = {
     solution: 'A structured and adaptable identity system communicates professionalism, progress and meaningful impact across multiple service areas.',
     deliverables: ['Logo Design', 'Signage', 'Company Profile', 'Invoice & Stationery Set', 'Social Campaign'],
     palette: [['#162855', '162855'], ['#C29634', 'C29634'], ['#FFFFFF', 'FFFFFF']],
-    gallery: ['IMAGES/PRIMARY LOGO.png', 'IMAGES/PRIMARY LOGO.png']
+    gallery: ['IMAGES/ASSETS/Brand package.png', 'IMAGES/ASSETS/INSTAGRAM INTRODUCTION POST.png']
   },
   audiobooks: {
     title: 'Audiobooks Lounge',
@@ -89,7 +89,7 @@ const caseStudies = {
     solution: 'A warm, approachable brand identity emphasising comfort and accessibility, built on visual metaphors of relaxation and ease to lower the barrier to entry for reluctant readers.',
     deliverables: ['Brand Identity', 'Logo Design', 'App UI Mockups', 'Marketing Materials'],
     palette: [],
-    gallery: ['IMAGES/AUDIOBOOKS LOUNGE.png', 'IMAGES/AUDIOBOOKS LOUNGE.png']
+    gallery: ['IMAGES/ASSETS/Audiobooks-Lounge_Carousel_01.png', 'IMAGES/ASSETS/Audiobooks-Lounge_Carousel_03.png']
   },
   bestea: {
     title: 'Bestea',
@@ -100,7 +100,7 @@ const caseStudies = {
     solution: 'A friendly, character-led mark built around a warm cookie mascot, giving the brand an approachable, universal feel that works as easily on packaging as it does on social media.',
     deliverables: ['Logo & Mascot Design'],
     palette: [],
-    gallery: ['IMAGES/logo-bestea.jpg', 'IMAGES/logo-bestea.jpg']
+    gallery: ['IMAGES/ASSETS/Bestea_Outdoor_Mockup.png', 'IMAGES/ASSETS/Bestea-1.png']
   }
 };
 
