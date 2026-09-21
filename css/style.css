@@ -198,7 +198,8 @@ nav#navbar.scrolled {
 
 .logo img {
   display: block;
-  height: 100%;
+  align-items: center;
+  height: 38px;
   width: auto;
   transition: opacity 0.25s;
 }
