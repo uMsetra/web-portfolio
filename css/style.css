@@ -193,7 +193,7 @@ nav#navbar.scrolled {
 .logo {
   display: flex;
   align-items: center;
-  height: 42px;
+  height: 32px;
 }
 
 .logo img {
