@@ -223,7 +223,7 @@ const projectData = {
   bestea: {
     title: 'Bestea',
     tag: 'Concept Brand',
-    heroImage: 'IMAGES/logo-bestea.jpg',
+    heroImage: 'IMAGES/Bestea.png',
     challenge: 'A self-initiated concept for a cookie brand designed to appeal across every age group and market segment — the perfect snack to pair with your tea.',
     approach: 'A friendly, character-led mascot mark, built to feel at home on packaging, social content and in-store signage alike.',
     solution: 'A warm, character-led identity built around a cookie mascot, giving the brand a universal, approachable feel across every touchpoint.',

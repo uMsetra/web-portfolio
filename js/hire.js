@@ -95,7 +95,7 @@ const caseStudies = {
     title: 'Bestea',
     industry: 'Food & Beverage — Concept Brand',
     role: 'Brand Designer (Self-Initiated Concept)',
-    heroImage: 'IMAGES/logo-bestea.jpg',
+    heroImage: 'IMAGES/Bestea.png',
     brief: 'A concept cookie brand designed to appeal across every age group and market segment — the perfect snack to pair with your tea, hence "Bestea."',
     solution: 'A friendly, character-led mark built around a warm cookie mascot, giving the brand an approachable, universal feel that works as easily on packaging as it does on social media.',
     deliverables: ['Logo & Mascot Design'],
