@@ -199,7 +199,7 @@ nav#navbar.scrolled {
 .logo img {
   display: block;
   align-items: center;
-  height: auto;
+  height: 28px;
   width: auto;
   transition: opacity 0.25s;
 }
