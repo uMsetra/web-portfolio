@@ -100,7 +100,7 @@ const caseStudies = {
     solution: 'A friendly, character-led mark built around a warm cookie mascot, giving the brand an approachable, universal feel that works as easily on packaging as it does on social media.',
     deliverables: ['Logo & Mascot Design'],
     palette: [],
-    gallery: ['IMAGES/logo-bestea.jpg', 'IMAGES/logo-bestea.jpg']
+    gallery: ['IMAGES/ASSETS/billboard.png', 'IMAGES/ASSETS/Bestea_Outdoor_Mockup.png', 'IMAGES/ASSETS/Bestea-1.png']
   }
 };
 
