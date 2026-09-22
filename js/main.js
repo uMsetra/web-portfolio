@@ -148,7 +148,7 @@ const projectData = {
     approach: 'High-contrast colour and bold, heavyweight type chosen specifically for roadside visibility and appeal within the automotive retail category.',
     solution: 'A high-contrast orange and black brand system with bold typography designed for maximum visibility in both physical retail and roadside environments.',
     deliverables: ['Logo Design', 'Brand Identity System', 'Marketing Materials', 'Signage Concepts'],
-    gallery: ['IMAGES/Frame 336.png', 'IMAGES/Frame 336.png', 'IMAGES/Frame 336.png']
+    gallery: ['IMAGES/ASSETS/DEPLOYED 15.png', 'IMAGES/ASSETS/DEPLOYED 13.png', 'IMAGES/ASSETS/DEPLOYED 14.png']
   },
   fusi: {
     title: 'Fusi Dental Clinic',
@@ -158,7 +158,7 @@ const projectData = {
     approach: 'A tooth-based monogram paired with a calming, clinical colour pairing chosen to feel trustworthy without feeling cold.',
     solution: 'A distinctive tooth-based monogram, supported by calming turquoise and charcoal, creates a clean and confident healthcare brand.',
     deliverables: ['Logo & Monogram', 'Signage', 'Staff Uniform Branding', 'Brochure', 'Booking App Mockup'],
-    gallery: ['IMAGES/FUSI DENTAL .png', 'IMAGES/FUSI DENTAL .png', 'IMAGES/FUSI DENTAL .png']
+    gallery: ['IMAGES/ASSETS/RECEPTION SIGN.png', 'IMAGES/ASSETS/EXTERIOR SIGNAGE.png', 'IMAGES/ASSETS/FUSI 5.png']
   },
   deployedants: {
     title: 'Deployed Ants',
@@ -168,7 +168,7 @@ const projectData = {
     approach: 'A geometric, collaboration-themed monogram built to hold up across pitch decks, merchandise and proposal documents alike.',
     solution: 'A geometric ant-inspired monogram and high-contrast palette communicate collaboration, intelligent problem-solving and purposeful development.',
     deliverables: ['Logo & Monogram', 'Merchandise (Hoodie, Sleeve, Notebook)', 'Proposal & Tender Documents'],
-    gallery: ['IMAGES/DEPLOYED ANTS.png', 'IMAGES/DEPLOYED ANTS.png', 'IMAGES/DEPLOYED ANTS.png']
+    gallery: ['IMAGES/ASSETS/DEPLOYED 2.png', 'IMAGES/ASSETS/DEPLOYED 4.png', 'IMAGES/ASSETS/DEPLOYED 1.png']
   },
   sompeta: {
     title: 'Sompeta Construction & Projects',
@@ -178,7 +178,7 @@ const projectData = {
     approach: 'Structure- and stability-led symbolism, translated into a geometric mark and a restrained, repeatable system.',
     solution: 'A geometric logo combining structure and stability symbolism, with complete brand guidelines for consistent application across all materials.',
     deliverables: ['Logo Redesign', 'Business Cards', 'Letterhead', 'Brand Guidelines'],
-    gallery: ['IMAGES/business card_11.jpg', 'IMAGES/business card_11.jpg', 'IMAGES/business card_11.jpg']
+    gallery: ['IMAGES/ASSETS/Construction board.png', 'IMAGES/ASSETS/DEPLOYED 9.png', 'IMAGES/ASSETS/DEPLOYED 10.png']
   },
   audiobooks: {
     title: 'Audiobooks Lounge',
@@ -188,7 +188,7 @@ const projectData = {
     approach: 'Visual metaphors of comfort and ease — soft shapes and a warm palette — to lower the barrier to entry for reluctant readers.',
     solution: 'A warm, approachable brand identity emphasising comfort and accessibility, with visual metaphors of relaxation and learning.',
     deliverables: ['Brand Identity', 'Logo Design', 'App UI Mockups', 'Marketing Materials'],
-    gallery: ['IMAGES/Frame 341.png', 'IMAGES/Frame 341.png', 'IMAGES/Frame 341.png']
+    gallery: ['IMAGES/ASSETS/Audiobook 1.png', 'IMAGES/ASSETS/Audiobook 2.png', 'IMAGES/ASSETS/Audiobook 3.png']
   },
   khanyokuhle: {
     title: 'Khanyokuhle Projects',
@@ -198,7 +198,7 @@ const projectData = {
     approach: 'A clean, restrained system built for boardrooms and proposal decks — designed to read as trustworthy at a glance.',
     solution: 'The folder, cityscape and upward graph combine into a structured identity representing organisation, financial clarity and sustainable growth.',
     deliverables: ['Brand System', 'Logo Design', 'Corporate Materials'],
-    gallery: ['IMAGES/khanyokuuhle-02.png', 'IMAGES/khanyokuuhle-02.png', 'IMAGES/khanyokuuhle-02.png']
+   gallery: ['IMAGES/ASSETS/khanyo 5.png', 'IMAGES/ASSETS/khanyo 7.png', 'IMAGES/ASSETS/khanyo 6.png']
   },
   marongrong: {
     title: 'Marong-Rong Cash Loans',
@@ -208,7 +208,7 @@ const projectData = {
     approach: 'A fast-moving wallet symbol and confident green palette, built to feel approachable rather than intimidating for first-time borrowers.',
     solution: 'The fast-moving wallet symbol and confident green palette communicate quick service, financial accessibility and responsible support.',
     deliverables: ['Logo Design', 'Storefront Signage', 'Loan Application Stationery', 'App UI Mockup'],
-    gallery: ['IMAGES/marong rong.png', 'IMAGES/marong rong.png', 'IMAGES/marong rong.png']
+    gallery: ['IMAGES/ASSETS/khanyo 1.png', 'IMAGES/ASSETS/khanyo 3.png', 'IMAGES/ASSETS/khanyo 2.png']
   },
   mosebela: {
     title: 'Mosebela',
@@ -218,7 +218,7 @@ const projectData = {
     approach: 'A structured, adaptable system designed to flex across multiple service lines without losing a consistent visual thread.',
     solution: 'A structured and adaptable identity system communicates professionalism, progress and meaningful impact across multiple service areas.',
     deliverables: ['Logo Design', 'Signage', 'Company Profile', 'Invoice & Stationery Set', 'Social Campaign'],
-    gallery: ['IMAGES/PRIMARY LOGO.png', 'IMAGES/PRIMARY LOGO.png', 'IMAGES/PRIMARY LOGO.png']
+   gallery: ['IMAGES/ASSETS/Mosabela 3.png', 'IMAGES/ASSETS/Mosabela 2.png', 'IMAGES/ASSETS/Mosabela 1.png']
   },
   bestea: {
     title: 'Bestea',
@@ -228,7 +228,7 @@ const projectData = {
     approach: 'A friendly, character-led mascot mark, built to feel at home on packaging, social content and in-store signage alike.',
     solution: 'A warm, character-led identity built around a cookie mascot, giving the brand a universal, approachable feel across every touchpoint.',
     deliverables: ['Logo & Mascot Design'],
-    gallery: ['IMAGES/logo-bestea.jpg', 'IMAGES/logo-bestea.jpg']
+    gallery: ['IMAGES/ASSETS/billboard.png', 'IMAGES/ASSETS/Bestea_Outdoor_Mockup.png', 'IMAGES/ASSETS/Bestea-1.png']
   }
 };
 
