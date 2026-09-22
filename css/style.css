@@ -131,6 +131,7 @@ section {
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   padding: 15px 30px;
   border-radius: 100px;
@@ -1506,6 +1507,50 @@ footer {
 }
 
 /* ==========================================================================
+   READ MORE (mobile text truncation for long prose blocks)
+   ========================================================================== */
+.text-clamp {
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  .text-clamp:not(.expanded) {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.read-more-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 12px 0 0;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .read-more-btn.has-overflow {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+.read-more-btn .chev {
+  transition: transform 0.25s var(--ease);
+  font-size: 0.7rem;
+}
+
+.read-more-btn.is-expanded .chev {
+  transform: rotate(180deg);
+}
+
+/* ==========================================================================
    EXPANDABLE GRIDS ("Show More" — reactive to screen size)
    ========================================================================== */
 .is-capped {
@@ -1515,6 +1560,17 @@ footer {
 .show-more-wrap {
   text-align: center;
   margin-top: 32px;
+}
+
+.show-more-btn {
+  background: var(--surface);
+  border-color: var(--border-strong);
+  color: var(--accent);
+}
+
+.show-more-btn:hover {
+  background: var(--accent-glow);
+  border-color: var(--accent);
 }
 
 .quickwork-subhead {
