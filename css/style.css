@@ -1208,23 +1208,43 @@ footer {
 }
 
 /* ==========================================================================
-   AUDIENCE TOGGLE
+   AUDIENCE TOGGLE — bold segmented pill, its own row below the nav
+   (moved out of the navbar entirely, so it no longer competes with the
+   logo/hamburger for width on small screens)
    ========================================================================== */
+.audience-select {
+  margin-bottom: 36px;
+}
+
+.audience-select-label {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 14px;
+}
+
 .audience-toggle {
   display: flex;
-  background: var(--surface);
+  background: transparent;
   border: 1px solid var(--border-strong);
   border-radius: 100px;
-  padding: 4px;
-  gap: 2px;
+  padding: 5px;
+  gap: 6px;
+  max-width: 440px;
 }
 
 .audience-toggle a {
-  padding: 9px 18px;
+  flex: 1;
+  text-align: center;
+  padding: 14px 18px;
   border-radius: 100px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--text-muted);
+  border: 1px solid transparent;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text);
   white-space: nowrap;
   transition: all 0.2s;
 }
@@ -1235,8 +1255,27 @@ footer {
   box-shadow: 0 2px 14px var(--accent-glow);
 }
 
+.audience-toggle a:not(.active) {
+  border-color: var(--border-strong);
+}
+
 .audience-toggle a:not(.active):hover {
-  color: var(--text);
+  border-color: var(--text-muted);
+  color: var(--accent);
+}
+
+.recruiter-hero .audience-select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recruiter-hero .audience-select-label {
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .audience-toggle a { padding: 12px 14px; font-size: 0.85rem; }
 }
 
 .nav-left {
@@ -1245,18 +1284,9 @@ footer {
   gap: 22px;
 }
 
-@media (max-width: 1100px) {
-  .nav-left { gap: 14px; }
-  .audience-toggle a { padding: 8px 13px; font-size: 0.78rem; }
-}
-
 @media (max-width: 480px) {
   nav#navbar { padding: 14px 16px; }
   .logo { height: 20px; }
-  .nav-left { gap: 10px; }
-  .audience-toggle { padding: 3px; gap: 1px; }
-  .audience-toggle a { padding: 6px 9px; font-size: 0; }
-  .audience-toggle a::before { content: attr(data-short); font-size: 0.68rem; }
   .menu-toggle { width: 22px; height: 15px; }
 }
 
