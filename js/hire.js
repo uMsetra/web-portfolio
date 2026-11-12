@@ -100,7 +100,7 @@ const caseStudies = {
     solution: 'A friendly, character-led mark built around a warm cookie mascot, giving the brand an approachable, universal feel that works as easily on packaging as it does on social media.',
     deliverables: ['Logo & Mascot Design'],
     palette: [],
-    gallery: ['IMAGES/ASSETS/billboard.png', 'IMAGES/ASSETS/Bestea_Outdoor_Mockup.png', 'IMAGES/ASSETS/Bestea-1.png']
+    gallery: ['IMAGES/Bestea.png', 'IMAGES/Bestea.png']
   }
 };
 
@@ -167,3 +167,28 @@ if (caseModalEl) {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeCaseModal();
 });
+
+// ==========================================================================
+// VIDEO PLAYER — click a .vcard to play its clip in a full-screen box
+// ==========================================================================
+(function () {
+  const box = document.getElementById('videoBox');
+  if (!box) return;
+  const v = document.getElementById('videoPlayer');
+  const cap = document.getElementById('videoCaption');
+  function close() {
+    box.classList.remove('active');
+    v.pause(); v.removeAttribute('src'); v.load();
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('[data-video]').forEach(c => c.addEventListener('click', () => {
+    v.src = c.dataset.video;
+    cap.textContent = c.dataset.title || '';
+    box.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    v.play().catch(() => {});
+  }));
+  box.addEventListener('click', e => { if (e.target === box) close(); });
+  box.querySelector('.lightbox-close').addEventListener('click', close);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+})();
