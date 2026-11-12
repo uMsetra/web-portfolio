@@ -27,6 +27,7 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#casestudies">Case Studies</a></li>
+    <li><a href="#motion">Motion</a></li>
     <li><a href="#morework">More Work</a></li>
     <li><a href="IMAGES/resume.pdf" target="_blank" class="nav-cta">Download Resume</a></li>
   </ul>
@@ -212,6 +213,27 @@
   </div>
 </section>
 
+<!-- MOTION: add a card per clip. Put the file in VIDEOS/ and match data-video, the video src and data-title. -->
+<section id="motion" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Motion</p>
+      <h2>Animation &amp; motion graphics.</h2>
+      <p>Short animated pieces. Tap any clip to play it.</p>
+    </div>
+    <div class="expand-block" data-expand-id="motion-grid" data-show-desktop="6" data-show-tablet="4" data-show-mobile="2">
+      <div class="vgrid reveal" data-expand-grid>
+        <button type="button" class="vcard" data-video="VIDEOS/animation-01.mp4" data-title="Animation 01"><video src="VIDEOS/animation-01.mp4#t=0.5" preload="metadata" muted playsinline></video><span class="vplay">▶</span><span class="vcap"><span class="tag">Motion</span><span class="vt">Animation 01</span></span></button>
+        <button type="button" class="vcard" data-video="VIDEOS/animation-02.mp4" data-title="Animation 02"><video src="VIDEOS/animation-02.mp4#t=0.5" preload="metadata" muted playsinline></video><span class="vplay">▶</span><span class="vcap"><span class="tag">Motion</span><span class="vt">Animation 02</span></span></button>
+        <button type="button" class="vcard" data-video="VIDEOS/animation-03.mp4" data-title="Animation 03"><video src="VIDEOS/animation-03.mp4#t=0.5" preload="metadata" muted playsinline></video><span class="vplay">▶</span><span class="vcap"><span class="tag">Motion</span><span class="vt">Animation 03</span></span></button>
+      </div>
+      <div class="show-more-wrap">
+        <button type="button" class="btn btn-outline show-more-btn" data-expand-toggle>Show More</button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- MORE WORK -->
 <section id="morework">
   <div class="container">
@@ -334,6 +356,13 @@
   <button class="lightbox-close" aria-label="Close">&times;</button>
   <img id="lightboxImage" src="" alt="">
   <p class="lightbox-caption" id="lightboxCaption"></p>
+</div>
+
+<!-- VIDEO PLAYER -->
+<div class="lightbox" id="videoBox">
+  <button class="lightbox-close" aria-label="Close">&times;</button>
+  <video id="videoPlayer" controls playsinline></video>
+  <p class="lightbox-caption" id="videoCaption"></p>
 </div>
 
 <!-- CASE STUDY MODAL -->
